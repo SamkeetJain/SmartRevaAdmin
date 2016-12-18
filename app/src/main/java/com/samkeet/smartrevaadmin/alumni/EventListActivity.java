@@ -4,10 +4,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 
 import com.samkeet.smartrevaadmin.R;
-
-import static com.samkeet.smartrevaadmin.R.id.desc;
 
 public class EventListActivity extends AppCompatActivity {
 
@@ -30,9 +29,10 @@ public class EventListActivity extends AppCompatActivity {
         mLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(mLayoutManager);
 
-        mAdapter = new EventListAdapter(name,type,date,desc);
+        mAdapter = new EventListAdapter(name,type);
         mRecyclerView.setAdapter(mAdapter);
 
 
     }
+    public void BackButton (View v){finish();}
 }

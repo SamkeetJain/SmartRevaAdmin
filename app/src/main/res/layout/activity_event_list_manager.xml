@@ -36,13 +36,14 @@
                     android:paddingLeft="5dp"
                     android:src="@drawable/ic_arrow_back_black_24dp" />
 
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_toRightOf="@+id/back_button"
                     android:paddingLeft="15dp"
-                    android:text="Event Member List"
+                    android:text="Event Member list"
                     android:textColor="#ffffff"
                     android:textSize="20sp" />
 

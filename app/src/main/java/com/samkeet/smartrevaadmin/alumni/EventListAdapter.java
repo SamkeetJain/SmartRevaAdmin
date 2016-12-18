@@ -28,7 +28,7 @@ public class EventListAdapter extends RecyclerView.Adapter<EventListAdapter.View
 
         }
     }
-    public EventListAdapter(String[] name, String[] date, String[] type, String[] desc) {
+    public EventListAdapter(String[] name, String[] date) {
         this.name = name;
         this.date = date;
         this.desc = desc;

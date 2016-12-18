@@ -19,6 +19,8 @@ public class MemberRequestAdapter extends RecyclerView.Adapter<MemberRequestAdap
     private String[] mName;
     private String[] mMobileno;
 
+
+
     public static class ViewHolder extends RecyclerView.ViewHolder {
         public TextView mNameView,mMobilenoView;
         public Button view_member_profile;
@@ -31,7 +33,7 @@ public class MemberRequestAdapter extends RecyclerView.Adapter<MemberRequestAdap
 
         }
     }
-    public MemberRequestAdapter(String[] mName, String[] mMobileno) {
+    public MemberRequestAdapter(String[] mSrn, String[] mTitles, String[] mName, String[] mMobileno) {
         this.mName = mName;
         this.mMobileno= mMobileno;
 

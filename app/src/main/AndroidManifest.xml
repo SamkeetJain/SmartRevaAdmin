@@ -24,7 +24,16 @@
         <activity android:name=".alumni.AddEventActivity" />
         <activity android:name=".alumni.EventListActivity" />
         <activity android:name=".alumni.MemberRequestManager" />
-        <activity android:name=".alumni.EventListManager"></activity>
+        <activity android:name=".alumni.EventListManager" />
+        <activity android:name=".fees.ViewFeeActivity" />
+        <activity android:name=".fees.AddFeeDetailsActivity" />
+        <activity android:name=".councling.ManageReservationsActivity" />
+        <activity android:name=".councling.ViewReservationActivity" />
+        <activity android:name=".councling.MyAppointmentsActivity" />
+        <activity android:name=".councling.RemarksActivity" />
+        <activity android:name=".councling.ViewWallPostsActivity" />
+        <activity android:name=".councling.AddWallPostActivity" />
+        <activity android:name=".councling.NotificationActivity"></activity>
     </application>
 
 </manifest>
