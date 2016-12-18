@@ -8,13 +8,23 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".alumni.AlumniMainActivity" />
+        <activity android:name=".councling.CounclingMain" />
+        <activity android:name=".fees.FeesMain" />
+        <activity android:name=".placements.PlacementsMain" />
+        <activity android:name=".alumni.MemberRequestActivity" />
+        <activity android:name=".alumni.AddEventActivity" />
+        <activity android:name=".alumni.EventListActivity" />
+        <activity android:name=".alumni.MemberRequestManager" />
+        <activity android:name=".alumni.EventListManager"></activity>
     </application>
 
 </manifest>
