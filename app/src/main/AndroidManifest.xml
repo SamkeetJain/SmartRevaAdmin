@@ -36,7 +36,11 @@
         <activity android:name=".councling.NotificationActivity" />
         <activity android:name=".councling.MyAppointmentManager" />
         <activity android:name=".councling.ViewReservationManager" />
-        <activity android:name=".councling.ViewWallPostsManager"></activity>
+        <activity android:name=".councling.ViewWallPostsManager" />
+        <activity android:name=".placements.AddEventActivity" />
+        <activity android:name=".placements.ManageEventActivity" />
+        <activity android:name=".placements.SendNotificationActivity" />
+        <activity android:name=".placements.ViewAcademicDetailsActivity"></activity>
     </application>
 
 </manifest>
