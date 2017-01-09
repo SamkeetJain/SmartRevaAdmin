@@ -19,13 +19,15 @@ public class ViewReservationAdapter extends RecyclerView.Adapter<ViewReservation
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
-        public TextView mSrn,mName,mDate,mTime;
+        public TextView mSrnview,mNameview,mDateview,mTimeview;
         public ViewHolder(View v) {
             super(v);
-            mSrn = (TextView) v.findViewById(R.id.srn);
-            mName= (TextView) v.findViewById(R.id.name);
-            mDate= (TextView) v.findViewById(R.id.date);
-            mTime=(TextView) v.findViewById(R.id.time);
+            mSrnview = (TextView) v.findViewById(R.id.srn);
+            mNameview= (TextView) v.findViewById(R.id.name);
+            mDateview= (TextView) v.findViewById(R.id.date);
+            mTimeview= (TextView) v.findViewById(R.id.time);
+
+
         }
     }
 
@@ -33,8 +35,9 @@ public class ViewReservationAdapter extends RecyclerView.Adapter<ViewReservation
     public ViewReservationAdapter(String[] mSrn, String[] mName,String[] mDate,String[] mTime){
         this.mSrn = mSrn;
         this.mName = mName;
-        this.mDate=mDate;
-        this.mTime=mTime;
+        this.mDate = mDate;
+        this.mTime= mTime;
+
     }
 
     @Override
@@ -46,10 +49,11 @@ public class ViewReservationAdapter extends RecyclerView.Adapter<ViewReservation
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        holder.mSrn.setText(mSrn[position]);
-        holder.mName.setText(mName[position]);
-        holder.mDate.setText(mDate[position]);
-        holder.mTime.setText(mTime[position]);
+        holder.mSrnview.setText(mSrn[position]);
+        holder.mNameview.setText(mName[position]);
+        holder.mTimeview.setText(mTime[position]);
+        holder.mDateview.setText(mDate[position]);
+
     }
 
     @Override

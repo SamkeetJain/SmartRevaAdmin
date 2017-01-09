@@ -14,25 +14,34 @@ import com.samkeet.smartrevaadmin.R;
 
 public class MyAppointmentAdapter extends RecyclerView.Adapter<MyAppointmentAdapter.ViewHolder> {
 
-    private String[] mTitle,mDesc,mDates;
+    private String[] mTitle,mDesc,mDates,mName,mSrn,mTime;
 
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
-        public TextView mTitleView,mDescView,mDateView;
+        public TextView mTitleView,mDescView,mDateView,mNameView,mSrnView,mTimeView;
         public ViewHolder(View v) {
             super(v);
             mTitleView = (TextView) v.findViewById(R.id.title);
             mDescView= (TextView) v.findViewById(R.id.desc);
             mDateView= (TextView) v.findViewById(R.id.datetext);
+            mNameView= (TextView) v.findViewById(R.id.name);
+            mSrnView= (TextView) v.findViewById(R.id.srn);
+            mTimeView= (TextView) v.findViewById(R.id.time);
+
+
         }
     }
 
 
-    public MyAppointmentAdapter(String[] mTitle, String[] mDesc,String[] mDates ){
+    public MyAppointmentAdapter(String[] mTitle, String[] mDesc,String[] mDates,String[] mName,String[] mSrn,String[] mTime ){
         this.mTitle = mTitle;
         this.mDesc = mDesc;
         this.mDates=mDates;
+        this.mName=mName;
+        this.mSrn=mSrn;
+        this.mTime=mTime;
+
     }
 
     @Override
@@ -47,6 +56,10 @@ public class MyAppointmentAdapter extends RecyclerView.Adapter<MyAppointmentAdap
         holder.mTitleView.setText(mTitle[position]);
         holder.mDescView.setText(mDesc[position]);
         holder.mDateView.setText(mDates[position]);
+        holder.mNameView.setText(mName[position]);
+        holder.mSrnView.setText(mSrn[position]);
+        holder.mTimeView.setText(mTime[position]);
+
     }
 
     @Override

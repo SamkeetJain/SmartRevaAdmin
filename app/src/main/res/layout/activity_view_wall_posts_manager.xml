@@ -2,10 +2,10 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_event_member_list"
+    android:id="@+id/activity_view_wall_posts_manager"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.samkeet.smartrevaadmin.alumni.EventListManager">
+    tools:context="com.samkeet.smartrevaadmin.councling.ViewWallPostsManager">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/apppppp"
@@ -36,14 +36,13 @@
                     android:paddingLeft="5dp"
                     android:src="@drawable/ic_arrow_back_black_24dp" />
 
-
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_toRightOf="@+id/back_button"
                     android:paddingLeft="15dp"
-                    android:text="Event Manager"
+                    android:text="Wall Post's Manager"
                     android:textColor="#ffffff"
                     android:textSize="20sp" />
 
@@ -71,10 +70,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/apppppp"
+        android:background="@color/lavender"
         android:orientation="vertical">
-
-
-
 
     </LinearLayout>
 

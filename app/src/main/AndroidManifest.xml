@@ -33,7 +33,10 @@
         <activity android:name=".councling.RemarksActivity" />
         <activity android:name=".councling.ViewWallPostsActivity" />
         <activity android:name=".councling.AddWallPostActivity" />
-        <activity android:name=".councling.NotificationActivity"></activity>
+        <activity android:name=".councling.NotificationActivity" />
+        <activity android:name=".councling.MyAppointmentManager" />
+        <activity android:name=".councling.ViewReservationManager" />
+        <activity android:name=".councling.ViewWallPostsManager"></activity>
     </application>
 
 </manifest>

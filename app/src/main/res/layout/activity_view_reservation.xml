@@ -8,8 +8,8 @@
     tools:context="com.samkeet.smartrevaadmin.councling.ViewReservationActivity">
 
     <android.support.design.widget.AppBarLayout
+        android:id="@+id/apppppp"
         android:layout_width="match_parent"
-        android:id="@+id/appBar"
         android:layout_height="wrap_content"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
@@ -23,33 +23,48 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/back_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerHorizontal="true"
+                    android:onClick="BackButton"
+                    android:paddingLeft="5dp"
+                    android:src="@drawable/ic_arrow_back_black_24dp" />
+
+                <TextView
+                    android:id="@+id/head"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_toRightOf="@+id/back_button"
+                    android:paddingLeft="15dp"
+                    android:text="View Reservation"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp" />
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="BackButton"
-                    android:layout_centerHorizontal="true"
-                    android:id="@+id/back"
-                    android:layout_alignParentLeft="true"
-                    android:src="@drawable/ic_arrow_back_black_24dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
-                    android:text="View Reservations"
-                    android:id="@+id/activity_title"
-                    android:layout_centerHorizontal="true"
-                    android:layout_toRightOf="@+id/back"
-                    android:textColor="#ffffff"
-                    android:textSize="20sp" />
+                    android:layout_alignParentRight="true"
+                    android:paddingRight="25dp"
+                    android:src="@drawable/ic_send_black_24dp" />
+                <!--todo send button not implemented-->
 
             </RelativeLayout>
 
 
-
         </android.support.v7.widget.Toolbar>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/colorAccent" />
+
 
     </android.support.design.widget.AppBarLayout>
 
@@ -80,6 +95,16 @@
                 />
         </LinearLayout>
         <!--todo recycler-->
+
+        <android.support.v7.widget.RecyclerView
+            android:paddingTop="10dp"
+            android:layout_below="@+id/appBar"
+            android:id="@+id/my_recycler_view"
+            android:scrollbars="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/lavender"
+            />
 
     </LinearLayout>
 

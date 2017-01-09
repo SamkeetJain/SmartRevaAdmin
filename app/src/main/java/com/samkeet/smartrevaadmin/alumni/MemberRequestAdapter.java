@@ -23,17 +23,15 @@ public class MemberRequestAdapter extends RecyclerView.Adapter<MemberRequestAdap
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         public TextView mNameView,mMobilenoView;
-        public Button view_member_profile;
 
         public ViewHolder(View v) {
             super(v);
             mNameView = (TextView) v.findViewById(R.id.name);
             mMobilenoView = (TextView) v.findViewById(R.id.mobileno);
-            view_member_profile = (Button) v.findViewById(R.id.view_member_profile);
 
         }
     }
-    public MemberRequestAdapter(String[] mSrn, String[] mTitles, String[] mName, String[] mMobileno) {
+    public MemberRequestAdapter(String[] mName, String[] mMobileno) {
         this.mName = mName;
         this.mMobileno= mMobileno;
 

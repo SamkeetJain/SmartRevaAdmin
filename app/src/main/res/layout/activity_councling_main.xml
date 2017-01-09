@@ -69,11 +69,18 @@
 
     </android.support.design.widget.AppBarLayout>
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/apppppp"
+        >
+
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:background="@color/lavender"
         android:layout_height="match_parent"
-        android:layout_below="@id/apppppp"
         android:orientation="vertical"
 
         >
@@ -208,5 +215,6 @@
 
 
     </LinearLayout>
+    </ScrollView>
 
 </RelativeLayout>

@@ -14,25 +14,25 @@ import com.samkeet.smartrevaadmin.R;
 
 public class EventListAdapter extends RecyclerView.Adapter<EventListAdapter.ViewHolder> {
 
-    private String[] name,date,type,desc;
+    private String[] mName,mDate,mType,mDesc;
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        public TextView name,date,type,desc;
+        public TextView mNameView,mDateView,mTypeView,mDescView;
 
         public ViewHolder(View v) {
             super(v);
-            name = (TextView) v.findViewById(R.id.name);
-            date = (TextView) v.findViewById(R.id.date);
-            type = (TextView) v.findViewById(R.id.type);
-            desc = (TextView) v.findViewById(R.id.desc);
+            mNameView = (TextView) v.findViewById(R.id.name);
+            mDateView = (TextView) v.findViewById(R.id.date);
+            mTypeView = (TextView) v.findViewById(R.id.type);
+            mDescView = (TextView) v.findViewById(R.id.desc);
 
         }
     }
-    public EventListAdapter(String[] name, String[] date) {
-        this.name = name;
-        this.date = date;
-        this.desc = desc;
-        this.type = type;
+    public EventListAdapter(String[] mName, String[] mType,String[] mDate,String[] mDesc) {
+        this.mName = mName;
+        this.mDate = mDate;
+        this.mDesc = mDesc;
+        this.mType = mType;
 
     }
 
@@ -48,15 +48,15 @@ public class EventListAdapter extends RecyclerView.Adapter<EventListAdapter.View
     public void onBindViewHolder(final ViewHolder holder, int position) {
 
 
-        holder.name.setText(name[position]);
-        holder.type.setText(type[position]);
-        holder.date.setText(date[position]);
-        holder.desc.setText(desc[position]);
+        holder.mNameView.setText(mName[position]);
+        holder.mTypeView.setText(mType[position]);
+        holder.mDateView.setText(mDate[position]);
+        holder.mDescView.setText(mDesc[position]);
 
     }
 
     @Override
     public int getItemCount() {
-        return name.length;
+        return mName.length;
     }
 }
