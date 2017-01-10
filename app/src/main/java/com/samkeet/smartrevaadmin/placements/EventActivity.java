@@ -1,4 +1,4 @@
-package com.samkeet.smartrevaadmin.alumni;
+package com.samkeet.smartrevaadmin.placements;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -10,8 +10,10 @@ import android.view.MotionEvent;
 import android.view.View;
 
 import com.samkeet.smartrevaadmin.R;
+import com.samkeet.smartrevaadmin.alumni.EventListAdapter;
+import com.samkeet.smartrevaadmin.alumni.EventListManager;
 
-public class EventListActivity extends AppCompatActivity {
+public class EventActivity extends AppCompatActivity {
 
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
@@ -25,7 +27,7 @@ public class EventListActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_event_list);
+        setContentView(R.layout.activity_manage_event);
 
         mRecyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
         mRecyclerView.setHasFixedSize(true);
@@ -51,7 +53,7 @@ public class EventListActivity extends AppCompatActivity {
                 View child = mRecyclerView.findChildViewUnder(motionEvent.getX(), motionEvent.getY());
                 if (child != null && mGestureDetector.onTouchEvent(motionEvent)) {
                     int temp = mRecyclerView.getChildPosition(child);
-                    Intent intent = new Intent(getApplicationContext(), EventListManager.class);
+                    Intent intent = new Intent(getApplicationContext(), EventManager.class);
                     intent.putExtra("DATA", "");
                     startActivity(intent);
 
@@ -71,5 +73,6 @@ public class EventListActivity extends AppCompatActivity {
         });
 
     }
+
     public void BackButton (View v){finish();}
 }

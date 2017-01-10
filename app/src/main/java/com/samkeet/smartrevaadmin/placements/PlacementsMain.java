@@ -6,9 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.samkeet.smartrevaadmin.R;
-import com.samkeet.smartrevaadmin.alumni.*;
-import com.samkeet.smartrevaadmin.alumni.AddEventActivity;
-import com.samkeet.smartrevaadmin.fees.ViewFeeActivity;
 
 public class PlacementsMain extends AppCompatActivity {
 
@@ -20,12 +17,12 @@ public class PlacementsMain extends AppCompatActivity {
 
     public void BackButton (View v){finish();}
 
-    public void AddEvents (View v){
-        Intent intent =new Intent(getApplicationContext(), AddEventActivity.class);
+    public void AddEventP (View v){
+        Intent intent =new Intent(getApplicationContext(), AddEventActivityP.class);
         startActivity(intent);
     }
     public void ManageEvents (View v){
-        Intent intent = new Intent(getApplicationContext(),ManageEventActivity.class);
+        Intent intent = new Intent(getApplicationContext(),EventActivity.class);
         startActivity(intent);
     }
     public void ViewAcademicDetails (View v){

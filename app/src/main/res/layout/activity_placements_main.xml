@@ -95,7 +95,7 @@
                     android:layout_gravity="center"
                     style="@style/Widget.AppCompat.Button.Colored"
                     android:gravity="center"
-                    android:onClick="AddEvent"
+                    android:onClick="AddEventP"
                     android:text="Add Event"
 
                     />
@@ -155,7 +155,7 @@
                     android:layout_gravity="center"
                     style="@style/Widget.AppCompat.Button.Colored"
                     android:gravity="center"
-                    android:onClick="SendNotifications"
+                    android:onClick="SendNotification"
                     android:text="Send Notifications"
 
                     />
