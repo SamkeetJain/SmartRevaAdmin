@@ -41,7 +41,12 @@
         <activity android:name=".placements.EventActivity" />
         <activity android:name=".placements.SendNotificationActivity" />
         <activity android:name=".placements.ViewAcademicDetailsActivity" />
-        <activity android:name=".placements.EventManager"></activity>
+        <activity android:name=".placements.EventManager" />
+        <activity android:name=".alumni.BlogActivity" />
+        <activity android:name=".alumni.BlogManager" />
+        <activity android:name=".alumni.JobReferalActivity" />
+        <activity android:name=".alumni.JobReferalManager" />
+        <activity android:name=".alumni.ViewProfileActivity"></activity>
     </application>
 
 </manifest>

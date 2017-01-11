@@ -30,4 +30,17 @@ public class AlumniMainActivity extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(),EventListActivity.class);
         startActivity(intent);
     }
+
+    public void Blog (View v){
+        Intent intent= new Intent(getApplicationContext(),BlogActivity.class);
+        startActivity(intent);
+    }
+    public void JobReferals (View v){
+        Intent intent=new Intent(getApplicationContext(),JobReferalActivity.class);
+        startActivity(intent);
+    }
+    public void ViewProfile(View v){
+        Intent intent=new Intent(getApplicationContext(),ViewProfileActivity.class);
+        startActivity(intent);
+    }
 }

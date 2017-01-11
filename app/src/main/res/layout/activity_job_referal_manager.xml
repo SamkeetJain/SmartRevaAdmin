@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_event_member_list"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_job_referal_manager"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.samkeet.smartrevaadmin.alumni.EventListManager">
+    tools:context="com.samkeet.smartrevaadmin.alumni.JobReferalManager">
     <android.support.design.widget.AppBarLayout
         android:id="@+id/apppppp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true">
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
@@ -37,23 +37,22 @@
                     android:paddingLeft="5dp"
                     android:src="@drawable/ic_arrow_back_black_24dp" />
 
-
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_toRightOf="@+id/back_button"
                     android:paddingLeft="15dp"
-                    android:text="Event Manager"
+                    android:text="Job Referals Maneger"
                     android:textColor="#ffffff"
                     android:textSize="20sp" />
-
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:paddingRight="25dp"
                     android:src="@drawable/ic_send_black_24dp" />
+
 
             </RelativeLayout>
 
@@ -67,17 +66,5 @@
 
 
     </android.support.design.widget.AppBarLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/apppppp"
-        android:orientation="vertical">
-
-
-
-
-    </LinearLayout>
-
 
 </RelativeLayout>

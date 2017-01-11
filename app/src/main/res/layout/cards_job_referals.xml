@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -28,13 +26,13 @@
                 >
 
                 <TextView
-                    android:id="@+id/srn"
+                    android:id="@+id/name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="22sp" />
 
                 <TextView
-                    android:id="@+id/name"
+                    android:id="@+id/compname"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingTop="5dp"
@@ -43,16 +41,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:background="#e0e0e0"/>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    >
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:paddingTop="5dp"
-                        android:id="@+id/date"
+                        android:id="@+id/jobtype"
                         android:textSize="18sp"
                         android:layout_weight="1"
                         />
@@ -60,12 +54,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:paddingTop="5dp"
-                        android:id="@+id/time"
+                        android:id="@+id/jobrole"
                         android:textSize="18sp"
                         android:layout_weight="1"
                         />
 
-                </LinearLayout>
             </LinearLayout>
 
         </LinearLayout>
