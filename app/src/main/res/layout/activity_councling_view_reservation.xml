@@ -86,7 +86,6 @@
                 android:layout_height="wrap_content"
                 android:text="Date:"
                 android:textSize="18dp"
-                android:textColor="#000000"
                 />
             <EditText
                 android:layout_width="match_parent"
@@ -94,7 +93,6 @@
                 android:hint="Date"
                 />
         </LinearLayout>
-        <!--todo recycler-->
 
         <android.support.v7.widget.RecyclerView
             android:paddingTop="10dp"
