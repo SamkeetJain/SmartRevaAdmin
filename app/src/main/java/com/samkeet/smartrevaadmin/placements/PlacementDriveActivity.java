@@ -19,9 +19,10 @@ public class PlacementDriveActivity extends AppCompatActivity {
     private RecyclerView.LayoutManager mLayoutManager;
 
     public String[] mName= {"NAme 1","Name 2","Name 3"};
-    public String[] mType= {"Type 1","Type 2","Type 3"};
-    public String[] mDesc= {"Desc 1","Desc 2","Desc 3"};
     public String[] mDate= {"Date 1","Date 2","Date 3"};
+    public String[] mJobrole= {"Jobrole 1","Jobrole 2","Jobrole 3"};
+    public String[] mDepartment= {"Department 1","Department 2","Department 3"};
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +34,7 @@ public class PlacementDriveActivity extends AppCompatActivity {
         mLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(mLayoutManager);
 
-        mAdapter = new AlumniEventListAdapter(mName,mType,mDate,mDesc);
+        mAdapter = new AlumniEventListAdapter(mName,mDate,mDepartment,mJobrole);
         mRecyclerView.setAdapter(mAdapter);
 
         final GestureDetector mGestureDetector = new GestureDetector(getApplicationContext(), new GestureDetector.SimpleOnGestureListener() {

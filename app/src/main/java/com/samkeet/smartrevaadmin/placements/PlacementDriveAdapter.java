@@ -14,31 +14,31 @@ import com.samkeet.smartrevaadmin.R;
 
 public class PlacementDriveAdapter extends RecyclerView.Adapter<PlacementDriveAdapter.ViewHolder> {
 
-    private String[] mName,mDate,mType,mDesc;
+    private String[] mName,mDate,mDepartment,mJobrole;
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        public TextView mNameView,mDateView,mTypeView,mDescView;
+        public TextView mNameView,mDateView,mDepartmentView,mJobroleView;
 
         public ViewHolder(View v) {
             super(v);
             mNameView = (TextView) v.findViewById(R.id.name);
             mDateView = (TextView) v.findViewById(R.id.date);
-            mTypeView = (TextView) v.findViewById(R.id.type);
-            mDescView = (TextView) v.findViewById(R.id.desc);
+            mDepartmentView = (TextView) v.findViewById(R.id.department);
+            mJobroleView = (TextView) v.findViewById(R.id.jobrole);
 
         }
     }
-    public PlacementDriveAdapter(String[] mName, String[] mType, String[] mDate, String[] mDesc) {
+    public PlacementDriveAdapter(String[] mName, String[] mDate, String[] mDepartment,String[] mJobrole) {
         this.mName = mName;
         this.mDate = mDate;
-        this.mDesc = mDesc;
-        this.mType = mType;
+        this.mDepartment=mDepartment;
+        this.mJobrole = mJobrole;
 
     }
 
     @Override
     public PlacementDriveAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.cards_event_list, parent, false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.cards_placement_drive, parent, false);
         ViewHolder vh = new ViewHolder(v);
         return vh;
     }
@@ -49,9 +49,9 @@ public class PlacementDriveAdapter extends RecyclerView.Adapter<PlacementDriveAd
 
 
         holder.mNameView.setText(mName[position]);
-        holder.mTypeView.setText(mType[position]);
         holder.mDateView.setText(mDate[position]);
-        holder.mDescView.setText(mDesc[position]);
+        holder.mDepartmentView.setText(mDepartment[position]);
+        holder.mJobroleView.setText(mJobrole[position]);
 
     }
 
