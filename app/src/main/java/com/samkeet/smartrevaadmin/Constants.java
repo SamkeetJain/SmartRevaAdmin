@@ -14,20 +14,26 @@ import java.util.regex.Pattern;
 
 public class Constants {
 
-    public static class URLs{
-        public static String BASE ="http://revacounselling.16mb.com/";
-        public static String ALUMNI_BLOG="ADM_alumni_discussion.php";
-        public static String ALUMNI_EVENTS="ADM_alumni_events.php";
-        public static String ALUMNI_JOB_REFER="ADM_alumni_job_refer.php";
-        public static String ALUMNI_MEMBER_REQUEST="ADM_alumni_member_request.php";
-        public static String ALUMNI_VIEW_PROFILE="ADM_alumni_view_profile.php";
-        public static String ADMIN_LOGIN="ADM_login.php";
+    public static class URLs {
+        public static String BASE = "http://revacounselling.16mb.com/";
+        public static String ALUMNI_BLOG = "ADM_alumni_discussion.php";
+        public static String ALUMNI_EVENTS = "ADM_alumni_events.php";
+        public static String ALUMNI_JOB_REFER = "ADM_alumni_job_refer.php";
+        public static String ALUMNI_MEMBER_REQUEST = "ADM_alumni_member_request.php";
+        public static String ALUMNI_VIEW_PROFILE = "ADM_alumni_view_profile.php";
+        public static String ADMIN_LOGIN = "ADM_login.php";
+        public static String PLACEMENT_DRIVE = "ADM_placemnts_drives.php";
+        public static String PLACEMENT_UG = "ADM_placement_ug.php";
+        public static String PLACEMENT_PG = "ADM_placement_pg.php";
+        public static String PLACEMENT_BACKLOG = "ADM_placement_backlogs.php";
+        public static String PLACEMENT_ACADEMIC_PROFILE = "ADM_placement_academic_profile.php";
+
     }
 
     public static class SharedPreferenceData {
 
-        public static SharedPreferences sharedPreferences=null;
-        public static SharedPreferences.Editor editor=null;
+        public static SharedPreferences sharedPreferences = null;
+        public static SharedPreferences.Editor editor = null;
 
         public static String SHAREDPREFERENCES = "SmartReva";
         public static String IS_LOGGED_IN = "isloggedin";
@@ -40,8 +46,8 @@ public class Constants {
             editor = sharedPreferences.edit();
         }
 
-        public static boolean isSharedPreferenceInited(){
-            if(sharedPreferences!=null)
+        public static boolean isSharedPreferenceInited() {
+            if (sharedPreferences != null)
                 return true;
             return false;
         }
@@ -58,11 +64,11 @@ public class Constants {
             return sharedPreferences.getString(TOKEN, "NOT_AVALIBLE");
         }
 
-        public static String getIsAlumni(){
+        public static String getIsAlumni() {
             return sharedPreferences.getString(IS_ALUMNI, "NOT_AVALIBLE");
         }
 
-        public static void setIsAlumni(String isAlumni){
+        public static void setIsAlumni(String isAlumni) {
             editor.putString(IS_ALUMNI, "yes");
             editor.apply();
         }
@@ -108,7 +114,7 @@ public class Constants {
             Pattern p = Pattern.compile("[^A-Za-z0-9 -.@]");
             Matcher m = p.matcher(s);
             boolean b = m.find();
-            return  b;
+            return b;
         }
     }
 
