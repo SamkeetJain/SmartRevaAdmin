@@ -41,7 +41,7 @@
                     android:layout_centerHorizontal="true"
                     android:layout_toRightOf="@+id/back_button"
                     android:paddingLeft="15dp"
-                    android:text="Event Manager"
+                    android:text="Drive Manager"
                     android:textColor="#ffffff"
                     android:textSize="20sp" />
 

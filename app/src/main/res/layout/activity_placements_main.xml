@@ -95,8 +95,8 @@
                     android:layout_gravity="center"
                     style="@style/Widget.AppCompat.Button.Colored"
                     android:gravity="center"
-                    android:onClick="AddEventP"
-                    android:text="Add Event"
+                    android:onClick="AddDrive"
+                    android:text="Add Drive"
 
                     />
             </LinearLayout>
@@ -115,8 +115,8 @@
                     android:layout_gravity="center"
                     style="@style/Widget.AppCompat.Button.Colored"
                     android:gravity="center"
-                    android:onClick="ManageEvents"
-                    android:text="Manage EVENTS"
+                    android:onClick="ManageDrives"
+                    android:text="Manage Drives"
 
                     />
             </LinearLayout>

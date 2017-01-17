@@ -34,7 +34,7 @@ public class PlacementDriveActivity extends AppCompatActivity {
         mLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(mLayoutManager);
 
-        mAdapter = new AlumniEventListAdapter(mName,mDate,mDepartment,mJobrole);
+        mAdapter = new PlacementDriveAdapter(mName,mDate,mDepartment,mJobrole);
         mRecyclerView.setAdapter(mAdapter);
 
         final GestureDetector mGestureDetector = new GestureDetector(getApplicationContext(), new GestureDetector.SimpleOnGestureListener() {
