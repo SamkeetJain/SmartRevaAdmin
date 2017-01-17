@@ -12,7 +12,7 @@ import android.view.View;
 import com.samkeet.smartrevaadmin.R;
 import com.samkeet.smartrevaadmin.alumni.AlumniEventListAdapter;
 
-public class PlacementEventActivity extends AppCompatActivity {
+public class PlacementDriveActivity extends AppCompatActivity {
 
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
@@ -52,7 +52,7 @@ public class PlacementEventActivity extends AppCompatActivity {
                 View child = mRecyclerView.findChildViewUnder(motionEvent.getX(), motionEvent.getY());
                 if (child != null && mGestureDetector.onTouchEvent(motionEvent)) {
                     int temp = mRecyclerView.getChildPosition(child);
-                    Intent intent = new Intent(getApplicationContext(), PlacementEventManager.class);
+                    Intent intent = new Intent(getApplicationContext(), PlacementDriveManager.class);
                     intent.putExtra("DATA", "");
                     startActivity(intent);
 

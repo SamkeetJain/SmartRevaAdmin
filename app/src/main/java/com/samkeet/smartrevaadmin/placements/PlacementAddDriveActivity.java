@@ -6,7 +6,7 @@ import android.view.View;
 
 import com.samkeet.smartrevaadmin.R;
 
-public class PlacementAddEventActivity extends AppCompatActivity {
+public class PlacementAddDriveActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

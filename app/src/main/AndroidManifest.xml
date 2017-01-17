@@ -4,7 +4,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/ic_launcher1"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -37,11 +37,11 @@
         <activity android:name=".councling.CounclingMyAppointmentManager" />
         <activity android:name=".councling.CounclingViewReservationManager" />
         <activity android:name=".councling.CounclingViewWallPostsManager" />
-        <activity android:name=".placements.PlacementAddEventActivity" />
-        <activity android:name=".placements.PlacementEventActivity" />
+        <activity android:name=".placements.PlacementAddDriveActivity" />
+        <activity android:name=".placements.PlacementDriveActivity" />
         <activity android:name=".placements.PlacementSendNotificationActivity" />
         <activity android:name=".placements.PlacementViewAcademicDetailsActivity" />
-        <activity android:name=".placements.PlacementEventManager" />
+        <activity android:name=".placements.PlacementDriveManager" />
         <activity android:name=".alumni.AlumniBlogActivity" />
         <activity android:name=".alumni.AlumniBlogManager" />
         <activity android:name=".alumni.AlumniJobReferalActivity" />

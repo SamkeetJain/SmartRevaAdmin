@@ -18,11 +18,11 @@ public class PlacementsMainActivity extends AppCompatActivity {
     public void BackButton (View v){finish();}
 
     public void AddEventP (View v){
-        Intent intent =new Intent(getApplicationContext(), PlacementAddEventActivity.class);
+        Intent intent =new Intent(getApplicationContext(), PlacementAddDriveActivity.class);
         startActivity(intent);
     }
     public void ManageEvents (View v){
-        Intent intent = new Intent(getApplicationContext(),PlacementEventActivity.class);
+        Intent intent = new Intent(getApplicationContext(),PlacementDriveActivity.class);
         startActivity(intent);
     }
     public void ViewAcademicDetails (View v){

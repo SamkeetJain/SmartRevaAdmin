@@ -12,7 +12,7 @@ import com.samkeet.smartrevaadmin.R;
  * Created by Frost on 1/10/2017.
  */
 
-public class PlacementEventAdapter extends RecyclerView.Adapter<PlacementEventAdapter.ViewHolder> {
+public class PlacementDriveAdapter extends RecyclerView.Adapter<PlacementDriveAdapter.ViewHolder> {
 
     private String[] mName,mDate,mType,mDesc;
 
@@ -28,7 +28,7 @@ public class PlacementEventAdapter extends RecyclerView.Adapter<PlacementEventAd
 
         }
     }
-    public PlacementEventAdapter(String[] mName, String[] mType, String[] mDate, String[] mDesc) {
+    public PlacementDriveAdapter(String[] mName, String[] mType, String[] mDate, String[] mDesc) {
         this.mName = mName;
         this.mDate = mDate;
         this.mDesc = mDesc;
@@ -37,7 +37,7 @@ public class PlacementEventAdapter extends RecyclerView.Adapter<PlacementEventAd
     }
 
     @Override
-    public PlacementEventAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public PlacementDriveAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.cards_event_list, parent, false);
         ViewHolder vh = new ViewHolder(v);
         return vh;
