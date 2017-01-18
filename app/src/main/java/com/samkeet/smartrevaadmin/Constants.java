@@ -27,6 +27,7 @@ public class Constants {
         public static String PLACEMENT_PG = "ADM_placement_pg.php";
         public static String PLACEMENT_BACKLOG = "ADM_placement_backlogs.php";
         public static String PLACEMENT_ACADEMIC_PROFILE = "ADM_placement_academic_profile.php";
+        public static String PLACEMENT_DRIVE_MANAGER = "ADM_placement_drive_manager.php";
 
     }
 
