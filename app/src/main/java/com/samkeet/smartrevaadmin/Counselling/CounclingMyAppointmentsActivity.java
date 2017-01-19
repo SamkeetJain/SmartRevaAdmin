@@ -1,4 +1,4 @@
-package com.samkeet.smartrevaadmin.councling;
+package com.samkeet.smartrevaadmin.Counselling;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -11,28 +11,32 @@ import android.view.View;
 
 import com.samkeet.smartrevaadmin.R;
 
-public class CounclingViewReservationActivity extends AppCompatActivity {
+public class CounclingMyAppointmentsActivity extends AppCompatActivity {
+
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
 
-    public String[] mSrn={"Srn 1","Srn 2","Srn 3"};
+    public String[] mTitles={"Title 1","Title 2","Title 3"};
+    public String[] mDesc={"Desc 1","Desc 2","Desc 3"};
+    public String[] mDateText={"Date 1","Date 2","Date 3"};
+    public String[] mTime={"Time 1","Time 2","Time 3"};
     public String[] mName={"Name 1","Name 2","Name 3"};
-    public String[] mDate={"Date 1","Date 2","Date 3"};
-    public  String[] mTime={"Time 1","Time 2","Time 3"};
+    public String[] mSrn={"Srn 1","Srn 2","Srn 3"};
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_councling_view_reservation);
+        setContentView(R.layout.activity_councling_my_appointments);
 
         mRecyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
         mRecyclerView.setHasFixedSize(true);
         mLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(mLayoutManager);
 
-        mAdapter = new CounclingViewReservationAdapter(mSrn,mName,mDate,mTime);
+        mAdapter = new CounclingMyAppointmentAdapter(mTitles,mDesc,mDateText,mName,mSrn,mTime);
         mRecyclerView.setAdapter(mAdapter);
-
 
         final GestureDetector mGestureDetector = new GestureDetector(getApplicationContext(), new GestureDetector.SimpleOnGestureListener() {
 
@@ -50,7 +54,7 @@ public class CounclingViewReservationActivity extends AppCompatActivity {
                 View child = mRecyclerView.findChildViewUnder(motionEvent.getX(), motionEvent.getY());
                 if (child != null && mGestureDetector.onTouchEvent(motionEvent)) {
                     int temp = mRecyclerView.getChildPosition(child);
-                    Intent intent = new Intent(getApplicationContext(), CounclingViewReservationManager.class);
+                    Intent intent = new Intent(getApplicationContext(), CounclingMyAppointmentManager.class);
                     intent.putExtra("DATA", "");
                     startActivity(intent);
 
@@ -69,7 +73,10 @@ public class CounclingViewReservationActivity extends AppCompatActivity {
             }
         });
     }
+
+
     public void BackButton (View v){finish();}
+
 
 
 }

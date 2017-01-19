@@ -5,7 +5,7 @@
     android:id="@+id/activity_manage_reservations"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.samkeet.smartrevaadmin.councling.CounclingManageReservationsActivity">
+    tools:context="com.samkeet.smartrevaadmin.Counselling.CounclingManageReservationsActivity">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/apppppp"

@@ -5,7 +5,7 @@
     android:id="@+id/activity_manage_event"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.samkeet.smartrevaadmin.placements.PlacementDriveActivity">
+    tools:context="com.samkeet.smartrevaadmin.Placements.PlacementDriveActivity">
     <android.support.design.widget.AppBarLayout
         android:id="@+id/apppppp"
         android:layout_width="match_parent"

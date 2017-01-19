@@ -1,4 +1,4 @@
-package com.samkeet.smartrevaadmin.placements;
+package com.samkeet.smartrevaadmin.Placements;
 
 import android.content.Context;
 import android.content.Intent;
@@ -18,7 +18,6 @@ import android.widget.Toast;
 
 import com.samkeet.smartrevaadmin.Constants;
 import com.samkeet.smartrevaadmin.R;
-import com.samkeet.smartrevaadmin.alumni.AlumniEventListAdapter;
 
 import org.json.JSONArray;
 import org.json.JSONObject;

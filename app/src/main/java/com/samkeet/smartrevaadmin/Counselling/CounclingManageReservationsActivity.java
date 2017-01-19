@@ -1,4 +1,4 @@
-package com.samkeet.smartrevaadmin.councling;
+package com.samkeet.smartrevaadmin.Counselling;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

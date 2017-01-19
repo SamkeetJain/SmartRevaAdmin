@@ -1,4 +1,4 @@
-package com.samkeet.smartrevaadmin.placements;
+package com.samkeet.smartrevaadmin.Placements;
 
 import android.content.Context;
 import android.graphics.Color;

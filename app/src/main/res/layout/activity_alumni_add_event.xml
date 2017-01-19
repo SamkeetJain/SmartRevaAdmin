@@ -5,7 +5,7 @@
     android:id="@+id/activity_add_event"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.samkeet.smartrevaadmin.alumni.AlumniAddEventActivity">
+    tools:context="com.samkeet.smartrevaadmin.Alumni.AlumniAddEventActivity">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/apppppp"
@@ -50,6 +50,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:paddingRight="25dp"
+                    android:onClick="Send"
                     android:src="@drawable/ic_send_black_24dp" />
 
             </RelativeLayout>
@@ -92,6 +93,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:id="@+id/title"
                     android:hint="Event Title" />
             </LinearLayout>
 
@@ -111,6 +113,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:id="@+id/type"
                     android:hint="Event Type" />
             </LinearLayout>
 
@@ -135,6 +138,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:id="@+id/date"
                     android:hint="Event Date" />
             </LinearLayout>
 
@@ -161,6 +165,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:id="@+id/desc"
                     android:hint="Event Description"
                     android:inputType="textMultiLine" />
             </LinearLayout>

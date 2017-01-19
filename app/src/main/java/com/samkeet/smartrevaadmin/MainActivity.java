@@ -5,10 +5,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import com.samkeet.smartrevaadmin.alumni.AlumniMainActivity;
-import com.samkeet.smartrevaadmin.councling.CounclingMainActivity;
-import com.samkeet.smartrevaadmin.fees.FeesMainActivity;
-import com.samkeet.smartrevaadmin.placements.PlacementsMainActivity;
+import com.samkeet.smartrevaadmin.Alumni.AlumniMainActivity;
+import com.samkeet.smartrevaadmin.Counselling.CounclingMainActivity;
+import com.samkeet.smartrevaadmin.Fees.FeesMainActivity;
+import com.samkeet.smartrevaadmin.Placements.PlacementsMainActivity;
 
 public class MainActivity extends AppCompatActivity {
 

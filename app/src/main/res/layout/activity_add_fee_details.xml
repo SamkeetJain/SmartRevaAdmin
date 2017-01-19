@@ -5,7 +5,7 @@
     android:id="@+id/activity_add_fee_details"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.samkeet.smartrevaadmin.fees.AddFeeDetailsActivity">
+    tools:context="com.samkeet.smartrevaadmin.Fees.AddFeeDetailsActivity">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/apppppp"

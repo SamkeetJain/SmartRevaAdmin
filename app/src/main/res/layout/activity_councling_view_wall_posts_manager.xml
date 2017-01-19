@@ -5,7 +5,7 @@
     android:id="@+id/activity_view_wall_posts_manager"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.samkeet.smartrevaadmin.councling.CounclingViewWallPostsManager">
+    tools:context="com.samkeet.smartrevaadmin.Counselling.CounclingViewWallPostsManager">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/apppppp"

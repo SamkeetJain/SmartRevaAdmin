@@ -1,4 +1,4 @@
-package com.samkeet.smartrevaadmin.placements;
+package com.samkeet.smartrevaadmin.Placements;
 
 import android.content.Context;
 import android.content.Intent;
@@ -68,7 +68,6 @@ public class PlacementDriveManager extends AppCompatActivity {
         } catch (JSONException e) {
             e.printStackTrace();
         }
-
 
         mGetMemberListButton.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -5,7 +5,7 @@
     android:id="@+id/activity_event_member_list"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.samkeet.smartrevaadmin.alumni.AlumniEventListManager">
+    tools:context="com.samkeet.smartrevaadmin.Alumni.AlumniEventListManager">
     <android.support.design.widget.AppBarLayout
         android:id="@+id/apppppp"
         android:layout_width="match_parent"
@@ -150,9 +150,10 @@
                 android:layout_height="wrap_content">
 
                 <Button
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:text="Get Members List"
                     style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_gravity="center"
                     android:layout_height="wrap_content" />
             </LinearLayout>
 

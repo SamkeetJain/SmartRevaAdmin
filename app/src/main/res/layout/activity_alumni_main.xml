@@ -5,7 +5,7 @@
     android:id="@+id/activity_alumni_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.samkeet.smartrevaadmin.alumni.AlumniMainActivity">
+    tools:context="com.samkeet.smartrevaadmin.Alumni.AlumniMainActivity">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/apppppp"

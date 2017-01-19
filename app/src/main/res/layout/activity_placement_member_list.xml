@@ -5,7 +5,7 @@
     android:id="@+id/activity_member_list"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.samkeet.smartrevaadmin.placements.PlacementMemberListActivity">
+    tools:context="com.samkeet.smartrevaadmin.Placements.PlacementMemberListActivity">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/apppppp"

@@ -1,4 +1,4 @@
-package com.samkeet.smartrevaadmin.placements;
+package com.samkeet.smartrevaadmin.Placements;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

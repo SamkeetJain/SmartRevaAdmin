@@ -1,4 +1,4 @@
-package com.samkeet.smartrevaadmin.fees;
+package com.samkeet.smartrevaadmin.Fees;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

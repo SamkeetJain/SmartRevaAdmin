@@ -1,4 +1,4 @@
-package com.samkeet.smartrevaadmin.alumni;
+package com.samkeet.smartrevaadmin.Alumni;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;

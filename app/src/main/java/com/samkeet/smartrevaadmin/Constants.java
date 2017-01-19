@@ -16,6 +16,7 @@ public class Constants {
 
     public static class URLs {
         public static String BASE = "http://revacounselling.16mb.com/";
+        public static String ALUMNI_BASE = "http://revacounselling.16mb.com/alumni/";
         public static String ALUMNI_BLOG = "ADM_alumni_discussion.php";
         public static String ALUMNI_EVENTS = "ADM_alumni_events.php";
         public static String ALUMNI_JOB_REFER = "ADM_alumni_job_refer.php";
