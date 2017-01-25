@@ -1,5 +1,6 @@
 package com.samkeet.smartrevaadmin.Alumni;
 
+import android.app.AliasActivity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -41,6 +42,10 @@ public class AlumniMainActivity extends AppCompatActivity {
     }
     public void ViewProfile(View v){
         Intent intent=new Intent(getApplicationContext(),AlumniViewProfileActivity.class);
+        startActivity(intent);
+    }
+    public void Notification(View v){
+        Intent intent = new Intent(getApplicationContext(), AlumniNotificationActivity.class);
         startActivity(intent);
     }
 }

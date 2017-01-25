@@ -47,7 +47,8 @@
         <activity android:name=".Alumni.AlumniJobReferalActivity" />
         <activity android:name=".Alumni.AlumniJobReferalManager" />
         <activity android:name=".Alumni.AlumniViewProfileActivity" />
-        <activity android:name=".Placements.PlacementMemberListActivity"></activity>
+        <activity android:name=".Placements.PlacementMemberListActivity" />
+        <activity android:name=".Alumni.AlumniNotificationActivity"></activity>
     </application>
 
 </manifest>

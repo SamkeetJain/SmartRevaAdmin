@@ -21,6 +21,9 @@ public class Constants {
         public static String ALUMNI_EVENTS = "ADM_alumni_events.php";
         public static String ALUMNI_JOB_REFER = "ADM_alumni_job_refer.php";
         public static String ALUMNI_MEMBER_REQUEST = "ADM_alumni_member_request.php";
+        public static String ALUMNI_DISSCUSSION = "ADM_alumni_discussion.php";
+        public static String ALUMNI_PUSH = "ADM_alumni_push.php";
+        public static String ALUMNI_NOTIFICATION = "ADM_alumni_notification.php";
         public static String ALUMNI_VIEW_PROFILE = "ADM_alumni_view_profile.php";
         public static String ADMIN_LOGIN = "ADM_login.php";
         public static String PLACEMENT_DRIVE = "ADM_placemnts_drives.php";
@@ -37,7 +40,7 @@ public class Constants {
         public static SharedPreferences sharedPreferences = null;
         public static SharedPreferences.Editor editor = null;
 
-        public static String SHAREDPREFERENCES = "SmartReva";
+        public static String SHAREDPREFERENCES = "SmartRevaAdmin";
         public static String IS_LOGGED_IN = "isloggedin";
         public static String USER_ID = "user_ID";
         public static String TOKEN = "token";

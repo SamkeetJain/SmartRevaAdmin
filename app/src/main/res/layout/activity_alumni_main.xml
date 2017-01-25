@@ -113,7 +113,7 @@
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:onClick="Blog"
-                    android:text="Blog" />
+                    android:text="Discussions" />
             </LinearLayout>
 
             <LinearLayout
@@ -187,6 +187,25 @@
                     android:gravity="center"
                     android:onClick="EventManager"
                     android:text="MANAGE EVENTS"
+
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/send_button"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:onClick="Notification"
+                    android:text="Send notification"
 
                     />
             </LinearLayout>
