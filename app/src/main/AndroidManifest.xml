@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.samkeet.smartrevaadmin">
 
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -51,7 +51,10 @@
         <activity android:name=".Alumni.AlumniJobReferalManager" />
         <activity android:name=".Alumni.AlumniViewProfileActivity" />
         <activity android:name=".Placements.PlacementMemberListActivity" />
-        <activity android:name=".Alumni.AlumniNotificationActivity"></activity>
+        <activity android:name=".Alumni.AlumniNotificationActivity" />
+        <activity android:name=".Alumni.AlumniJobReferralAcceptedActivity" />
+        <activity android:name=".Alumni.AlumniJobReferralRejectedActivity" />
+        <activity android:name=".Alumni.AlumniJobReferralsActivity"></activity>
     </application>
 
 </manifest>

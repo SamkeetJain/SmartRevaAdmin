@@ -65,7 +65,9 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/apppppp">
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/apppppp"
+        android:layout_alignParentStart="true">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -90,7 +92,7 @@
                 <Button
                     android:id="@+id/member_request_button"
                     style="@style/Widget.AppCompat.Button.Colored"
-                    android:layout_width="200dp"
+                    android:layout_width="210dp"
                     android:layout_height="50dp"
                     android:layout_gravity="center"
                     android:gravity="center"
@@ -108,7 +110,7 @@
                 <Button
                     android:id="@+id/blog_button"
                     style="@style/Widget.AppCompat.Button.Colored"
-                    android:layout_width="200dp"
+                    android:layout_width="210dp"
                     android:layout_height="50dp"
                     android:layout_gravity="center"
                     android:gravity="center"
@@ -117,6 +119,23 @@
             </LinearLayout>
 
             <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/job_referal_button"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="210dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:onClick="JobReferals"
+                android:text="Job Referrals" />
+        </LinearLayout>
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="15dp"
@@ -124,14 +143,31 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/job_referal_button"
+                    android:id="@+id/job_referal_Accepted_button"
                     style="@style/Widget.AppCompat.Button.Colored"
-                    android:layout_width="200dp"
+                    android:layout_width="210dp"
                     android:layout_height="50dp"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:onClick="JobReferals"
-                    android:text="Job Referals" />
+                    android:onClick="JobReferalsAcc"
+                    android:text="Job Referrals Accepted" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/job_referal_rejected_button"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="210dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:onClick="JobReferalsRej"
+                    android:text="Job Referrals Rejected" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -143,7 +179,7 @@
                 <Button
                     android:id="@+id/view_profile_button"
                     style="@style/Widget.AppCompat.Button.Colored"
-                    android:layout_width="200dp"
+                    android:layout_width="210dp"
                     android:layout_height="50dp"
                     android:layout_gravity="center"
                     android:gravity="center"
@@ -162,7 +198,7 @@
                 <Button
                     android:id="@+id/add_events_button"
                     style="@style/Widget.AppCompat.Button.Colored"
-                    android:layout_width="200dp"
+                    android:layout_width="210dp"
                     android:layout_height="50dp"
                     android:layout_gravity="center"
                     android:gravity="center"
@@ -181,7 +217,7 @@
                 <Button
                     android:id="@+id/manage_events_button"
                     style="@style/Widget.AppCompat.Button.Colored"
-                    android:layout_width="200dp"
+                    android:layout_width="210dp"
                     android:layout_height="50dp"
                     android:layout_gravity="center"
                     android:gravity="center"
@@ -200,7 +236,7 @@
                 <Button
                     android:id="@+id/send_button"
                     style="@style/Widget.AppCompat.Button.Colored"
-                    android:layout_width="200dp"
+                    android:layout_width="210dp"
                     android:layout_height="50dp"
                     android:layout_gravity="center"
                     android:gravity="center"
