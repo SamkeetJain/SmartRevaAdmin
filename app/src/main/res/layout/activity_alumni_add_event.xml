@@ -93,6 +93,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:inputType="text"
                     android:id="@+id/title"
                     android:hint="Event Title" />
             </LinearLayout>
@@ -138,6 +139,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:editable="false"
+                    android:onClick="date"
                     android:id="@+id/date"
                     android:hint="Event Date" />
             </LinearLayout>

@@ -5,8 +5,11 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
+import android.util.Patterns;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -81,8 +84,36 @@ public class AlumniViewProfileActivity extends AppCompatActivity {
 
     public void Send(View v) {
         mobileEdit = mMobileView.getText().toString();
+        validate();
+    }
+
+    public void validate(){
+        if (!validMob()){
+            return;
+        }
         GetPendingMembers getPendingMembers = new GetPendingMembers();
         getPendingMembers.execute();
+    }
+
+    private boolean validMob(){
+        if (mobileEdit.isEmpty() || !isValidMobilenumber(mobileEdit) || mobileEdit.length() > 15) {
+            Toast.makeText(getApplicationContext(),"Invalid Phone Number",Toast.LENGTH_SHORT).show();
+            requestFocus(mMobileView);
+            return false;
+        }if (Constants.Methods.checkForSpecial(mobileEdit)){
+            Toast.makeText(getApplicationContext(),"Remove Special charecters",Toast.LENGTH_SHORT).show();
+            requestFocus(mMobileView);
+            return false;
+        }
+        return true;
+    }
+    private static boolean isValidMobilenumber(String mobileNo) {
+        return !TextUtils.isEmpty(mobileNo) && Patterns.PHONE.matcher(mobileNo).matches();
+    }
+    private void requestFocus(View view) {
+        if (view.requestFocus()) {
+            getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
+        }
     }
 
     private class GetPendingMembers extends AsyncTask<Void, Void, Integer> {

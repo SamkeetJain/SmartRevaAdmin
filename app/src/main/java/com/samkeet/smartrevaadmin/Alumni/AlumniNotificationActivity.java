@@ -6,6 +6,7 @@ import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -54,17 +55,63 @@ public class AlumniNotificationActivity extends AppCompatActivity {
         title = mTitle.getText().toString().trim();
         message = mMessage.getText().toString().trim();
 
-        if (title.length() > 99) {
-            Toast.makeText(getApplicationContext(), "Title should be less than 100 characters", Toast.LENGTH_SHORT).show();
-            return;
-        }
+        validate();
 
+
+    }
+
+    public void validate(){
+        if (!validTitle()){
+            return ;
+        }
+        if (!validateMessage()){
+            return ;
+        }
         Sendnotification sendnotification = new Sendnotification();
         sendnotification.execute();
 
         SendPush sendPush = new SendPush();
         sendPush.execute();
 
+    }
+    private boolean validTitle(){
+        if (title.length()>100){
+            Toast.makeText(getApplicationContext(),"Title cannot be more than 100 charecters",Toast.LENGTH_SHORT).show();
+            requestFocus(mTitle);
+            return false;
+        }if (title.isEmpty()){
+            Toast.makeText(getApplicationContext(),"Invalid Title",Toast.LENGTH_SHORT).show();
+            requestFocus(mTitle);
+            return false;
+        }if (Constants.Methods.checkForSpecial(title)){
+            Toast.makeText(getApplicationContext(),"Remove special charecters from the title field",Toast.LENGTH_SHORT).show();
+            requestFocus(mTitle);
+            return false;
+        }
+        return true;
+    }
+
+    private boolean validateMessage(){
+        if (message.length()>1000){
+            Toast.makeText(getApplicationContext(),"Message cannot be more than 1000 charecters",Toast.LENGTH_SHORT).show();
+            requestFocus(mMessage);
+            return false;
+        }if (message.isEmpty()){
+            Toast.makeText(getApplicationContext(),"Invalid Message",Toast.LENGTH_SHORT).show();
+            requestFocus(mMessage);
+            return false;
+        }if (Constants.Methods.checkForSpecial(message)){
+            Toast.makeText(getApplicationContext(),"Remove special charecters from the Message field",Toast.LENGTH_SHORT).show();
+            requestFocus(mMessage);
+            return false;
+        }
+        return true;
+    }
+
+    private void requestFocus(View view) {
+        if (view.requestFocus()) {
+            getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
+        }
     }
 
     public class Sendnotification extends AsyncTask<Void, Void, Integer> {

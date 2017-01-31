@@ -74,7 +74,7 @@ public class LoginActivity extends AppCompatActivity {
 
         protected Integer doInBackground(Void... params) {
             try {
-                URL url = new URL(Constants.URLs.BASE + Constants.URLs.ADMIN_LOGIN);
+                URL url = new URL(Constants.URLs.ALUMNI_BASE + Constants.URLs.ADMIN_LOGIN);
                 HttpURLConnection connection = (HttpURLConnection) url.openConnection();
                 connection.setDoInput(true);
                 connection.setDoOutput(true);
