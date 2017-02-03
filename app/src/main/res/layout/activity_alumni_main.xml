@@ -5,6 +5,7 @@
     android:id="@+id/activity_alumni_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/lavender"
     tools:context="com.samkeet.smartrevaadmin.Alumni.AlumniMainActivity">
 
     <android.support.design.widget.AppBarLayout
@@ -65,14 +66,13 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentBottom="true"
         android:layout_below="@+id/apppppp"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/lavender"
             android:orientation="vertical">
 
             <LinearLayout
@@ -135,40 +135,7 @@
                 android:onClick="JobReferals"
                 android:text="Job Referrals" />
         </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="15dp"
-                android:gravity="center"
-                android:orientation="horizontal">
 
-                <Button
-                    android:id="@+id/job_referal_Accepted_button"
-                    style="@style/Widget.AppCompat.Button.Colored"
-                    android:layout_width="210dp"
-                    android:layout_height="50dp"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:onClick="JobReferalsAcc"
-                    android:text="Job Referrals Accepted" />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="15dp"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/job_referal_rejected_button"
-                    style="@style/Widget.AppCompat.Button.Colored"
-                    android:layout_width="210dp"
-                    android:layout_height="50dp"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:onClick="JobReferalsRej"
-                    android:text="Job Referrals Rejected" />
-            </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

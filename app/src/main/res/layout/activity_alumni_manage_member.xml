@@ -5,6 +5,7 @@
     android:id="@+id/activity_manage_member"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/lavender"
     tools:context="com.samkeet.smartrevaadmin.Alumni.AlumniMemberRequestManager">
     <android.support.design.widget.AppBarLayout
         android:id="@+id/apppppp"
@@ -66,8 +67,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/apppppp"
-        android:background="@color/lavender">
+        android:layout_below="@+id/apppppp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -386,32 +386,7 @@
 
             </android.support.v7.widget.CardView>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
 
-                <Button
-                    android:id="@+id/accept_button"
-                    style="@style/Widget.AppCompat.Button.Colored"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:onClick="AcceptButton"
-                    android:text="Accept" />
-
-                <Button
-                    android:id="@+id/reject_button"
-                    style="@style/Widget.AppCompat.Button.Colored"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:onClick="RejectButton"
-                    android:text="Reject" />
-
-            </LinearLayout>
 
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
@@ -446,13 +421,15 @@
                         android:padding="3dp">
 
                         <EditText
+                            android:id="@+id/remarks_et"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="Remarks"
+                            android:hint="Remarks if any"
                             android:textSize="12sp"
                             android:lines="1"
                             android:maxLines="1"
-                            android:imeOptions="actionDone"/>
+                            android:imeOptions="actionDone"
+                            android:inputType="text"/>
 
 
                     </LinearLayout>
@@ -460,9 +437,35 @@
                 </LinearLayout>
 
 
+
             </android.support.v7.widget.CardView>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
+                <Button
+                    android:id="@+id/accept_button"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:onClick="AcceptButton"
+                    android:text="Accept" />
+
+                <Button
+                    android:id="@+id/reject_button"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:onClick="RejectButton"
+                    android:text="Reject" />
+
+            </LinearLayout>
         </LinearLayout>
 
     </ScrollView>

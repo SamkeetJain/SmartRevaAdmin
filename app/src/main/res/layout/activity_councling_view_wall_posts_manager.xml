@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_view_wall_posts_manager"
     android:layout_width="match_parent"
+    android:background="@color/lavender"
     android:layout_height="match_parent"
     tools:context="com.samkeet.smartrevaadmin.Counselling.CounclingViewWallPostsManager">
 
@@ -70,7 +71,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/apppppp"
-        android:background="@color/lavender"
         android:orientation="vertical">
 
     </LinearLayout>

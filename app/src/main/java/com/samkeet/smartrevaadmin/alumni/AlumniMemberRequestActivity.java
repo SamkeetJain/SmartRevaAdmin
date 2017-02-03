@@ -42,6 +42,8 @@ public class AlumniMemberRequestActivity extends AppCompatActivity {
     private RecyclerView.LayoutManager mLayoutManager;
     public SwipeRefreshLayout swipeRefreshLayout;
 
+    public String type;
+
     public String[] mName, mMobileno;
     public JSONObject[] objects;
 
@@ -49,6 +51,8 @@ public class AlumniMemberRequestActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alumni_member_request);
+        type=getIntent().getStringExtra("TYPE");
+
         progressDialogContext=this;
 
         mRecyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
@@ -84,6 +88,7 @@ public class AlumniMemberRequestActivity extends AppCompatActivity {
                     int temp = mRecyclerView.getChildPosition(child);
                     Intent intent = new Intent(getApplicationContext(), AlumniMemberRequestManager.class);
                     intent.putExtra("DATA", objects[temp].toString());
+                    intent.putExtra("TYPE",type);
                     startActivity(intent);
 
                 }
@@ -129,7 +134,8 @@ public class AlumniMemberRequestActivity extends AppCompatActivity {
                 connection.setRequestMethod("POST");
                 Log.d("POST", "DATA ready to sent");
 
-                Uri.Builder _data = new Uri.Builder().appendQueryParameter("token", Constants.SharedPreferenceData.getTOKEN()).appendQueryParameter("requestType","getpending");
+
+                Uri.Builder _data = new Uri.Builder().appendQueryParameter("token", Constants.SharedPreferenceData.getTOKEN()).appendQueryParameter("requestType",type);
                 BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(connection.getOutputStream(), "UTF-8"));
                 writer.write(_data.build().getEncodedQuery());
                 writer.flush();

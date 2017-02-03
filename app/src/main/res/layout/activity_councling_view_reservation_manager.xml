@@ -5,6 +5,7 @@
     android:id="@+id/activity_view_reservation_manager"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/lavender"
     tools:context="com.samkeet.smartrevaadmin.Counselling.CounclingViewReservationManager">
 
     <android.support.design.widget.AppBarLayout
@@ -66,13 +67,16 @@
 
     </android.support.design.widget.AppBarLayout>
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/apppppp">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/apppppp"
-        android:background="@color/lavender"
         android:orientation="vertical">
 
     </LinearLayout>
 
+    </ScrollView>
 </RelativeLayout>

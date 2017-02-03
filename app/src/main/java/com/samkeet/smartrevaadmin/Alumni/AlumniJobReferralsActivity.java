@@ -14,17 +14,26 @@ public class AlumniJobReferralsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alumni_job_referrals);
     }
-    public void JobReferalsAcc (View v){
-        Intent intent = new Intent(getApplicationContext(),AlumniJobReferralAcceptedActivity.class);
+
+    public void JobReferalsAcc(View v) {
+        Intent intent = new Intent(getApplicationContext(), AlumniJobReferalActivity.class);
+        intent.putExtra("TYPE", "getapprove");
         startActivity(intent);
     }
-    public void JobReferalsRej (View v){
-        Intent intent = new Intent(getApplicationContext(),AlumniJobReferralRejectedActivity.class);
+
+    public void JobReferalsRej(View v) {
+        Intent intent = new Intent(getApplicationContext(), AlumniJobReferalActivity.class);
+        intent.putExtra("TYPE", "getreject");
         startActivity(intent);
     }
-    public void JobReferalsPend (View v){
-        Intent intent = new Intent(getApplicationContext(),AlumniJobReferalActivity.class);
+
+    public void JobReferalsPend(View v) {
+        Intent intent = new Intent(getApplicationContext(), AlumniJobReferalActivity.class);
+        intent.putExtra("TYPE", "getpending");
         startActivity(intent);
     }
-    public void BackButton(View v){finish();}
+
+    public void BackButton(View v) {
+        finish();
+    }
 }

@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -34,20 +35,27 @@ public class AlumniMemberRequestManager extends AppCompatActivity {
 
     public JSONObject object;
     public String data;
-    public String mobile,name,ID,email,srn,course,dept,yog,company,desg,loc;
-    public TextView mMobile,mName,mEmail,mSrn,mCourse,mDept,mYog,mCompany,mDesg,mLoc;
+    public String mobile, name, ID, email, srn, course, dept, yog, company, desg, loc;
+    public TextView mMobile, mName, mEmail, mSrn, mCourse, mDept, mYog, mCompany, mDesg, mLoc;
+
+    public EditText mRemarks;
+    public String remarks;
+
+    public String type;
 
     public String requestType;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alumni_manage_member);
-        progressDialogContext=this;
+        type = getIntent().getStringExtra("TYPE");
+        progressDialogContext = this;
 
         data = getIntent().getStringExtra("DATA");
 
         try {
-            object=new JSONObject(data);
+            object = new JSONObject(data);
             ID = object.getString("Id");
             mobile = object.getString("mobile_no");
             name = object.getString("name");
@@ -59,10 +67,13 @@ public class AlumniMemberRequestManager extends AppCompatActivity {
             company = object.getString("currentCompany");
             desg = object.getString("designation");
             loc = object.getString("location");
+            remarks = object.getString("remarks");
 
         } catch (JSONException e) {
             e.printStackTrace();
         }
+
+        mRemarks = (EditText) findViewById(R.id.remarks_et);
 
         mMobile = (TextView) findViewById(R.id.mobileno);
         mName = (TextView) findViewById(R.id.name);
@@ -85,24 +96,64 @@ public class AlumniMemberRequestManager extends AppCompatActivity {
         mDesg.setText(desg);
         mYog.setText(yog);
         mLoc.setText(loc);
+        mRemarks.setText(remarks);
     }
 
-    public void BackButton (View v){finish();}
 
-    public void AcceptButton(View v){
-        authenticationError=true;
+
+    private boolean valid() {
+        if (Constants.Methods.checkForSpecial(remarks)) {
+            Toast.makeText(getApplicationContext(), "remove special charecters from remarks", Toast.LENGTH_LONG).show();
+            return false;
+        }
+        if (remarks.length() > 256) {
+            Toast.makeText(getApplicationContext(), "Remarks should be less than 256 charecters", Toast.LENGTH_LONG).show();
+            return false;
+        }
+        return true;
+    }
+
+    public void BackButton(View v) {
+        finish();
+    }
+
+    public void AcceptButton(View v) {
+        remarks = mRemarks.getText().toString().trim();
+        if (!valid()) {
+            return;
+        }
+        if (type.equals("getapproved")) {
+            Toast.makeText(getApplicationContext(), "Already accepted", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        authenticationError = true;
+
         errorMessage = "Data Corrupted";
         requestType = "approve";
         MemberRequest memberRequest = new MemberRequest();
         memberRequest.execute();
+        AddRemark addRemark = new AddRemark();
+        addRemark.execute();
 
     }
-    public void RejectButton(View v){
-        authenticationError=true;
+
+    public void RejectButton(View v) {
+        remarks = mRemarks.getText().toString().trim();
+        if (!valid()) {
+            return;
+        }
+        if (type.equals("getrejected")) {
+            Toast.makeText(getApplicationContext(), "Already rejected", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        authenticationError = true;
         errorMessage = "Data Corrupted";
         requestType = "reject";
         MemberRequest memberRequest = new MemberRequest();
         memberRequest.execute();
+        AddRemark addRemark = new AddRemark();
+        addRemark.execute();
 
     }
 
@@ -125,7 +176,7 @@ public class AlumniMemberRequestManager extends AppCompatActivity {
                 Log.d("POST", "DATA ready to sent");
 
                 Uri.Builder _data = new Uri.Builder().appendQueryParameter("token", Constants.SharedPreferenceData.getTOKEN())
-                        .appendQueryParameter("requestType",requestType).appendQueryParameter("ID",ID);
+                        .appendQueryParameter("requestType", requestType).appendQueryParameter("ID", ID);
                 BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(connection.getOutputStream(), "UTF-8"));
                 writer.write(_data.build().getEncodedQuery());
                 writer.flush();
@@ -151,12 +202,12 @@ public class AlumniMemberRequestManager extends AppCompatActivity {
                 } else {
                     JSONObject jsonObject = new JSONObject(jsonResults.toString());
                     String status = jsonObject.getString("status");
-                    if(status.equals("failed")){
-                        authenticationError=true;
-                        errorMessage=status;
-                    }else if(status.equals("success")){
-                        authenticationError=false;
-                        errorMessage=status;
+                    if (status.equals("failed")) {
+                        authenticationError = true;
+                        errorMessage = status;
+                    } else if (status.equals("success")) {
+                        authenticationError = false;
+                        errorMessage = status;
                     }
                 }
 
@@ -180,6 +231,52 @@ public class AlumniMemberRequestManager extends AppCompatActivity {
                 finish();
             }
 
+        }
+    }
+
+    private class AddRemark extends AsyncTask<Void, Void, Integer> {
+
+        protected void onPreExecute() {
+        }
+
+        protected Integer doInBackground(Void... params) {
+            try {
+                URL url = new URL(Constants.URLs.ALUMNI_BASE + Constants.URLs.ALUMNI_MEMBER_REQUEST);
+                HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+                connection.setDoInput(true);
+                connection.setDoOutput(true);
+                connection.setRequestMethod("POST");
+                Log.d("POST", "DATA ready to sent");
+
+                Uri.Builder _data = new Uri.Builder().appendQueryParameter("token", Constants.SharedPreferenceData.getTOKEN())
+                        .appendQueryParameter("requestType", "addremarks").appendQueryParameter("ID", ID)
+                        .appendQueryParameter("remarks", remarks);
+                BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(connection.getOutputStream(), "UTF-8"));
+                writer.write(_data.build().getEncodedQuery());
+                writer.flush();
+                writer.close();
+                Log.d("POST", "DATA SENT");
+
+                InputStreamReader in = new InputStreamReader(connection.getInputStream());
+
+                StringBuilder jsonResults = new StringBuilder();
+                // Load the results into a StringBuilder
+                int read;
+                char[] buff = new char[1024];
+                while ((read = in.read(buff)) != -1) {
+                    jsonResults.append(buff, 0, read);
+                }
+                connection.disconnect();
+                return 1;
+
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
+
+            return 1;
+        }
+
+        protected void onPostExecute(Integer result) {
         }
     }
 

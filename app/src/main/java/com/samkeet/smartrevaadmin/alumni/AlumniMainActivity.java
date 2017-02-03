@@ -19,9 +19,10 @@ public class AlumniMainActivity extends AppCompatActivity {
     public void BackButton (View v){finish();}
 
     public void MemberRequest (View v){
-        Intent intent = new Intent(getApplicationContext(),AlumniMemberRequestActivity.class);
+        Intent intent = new Intent(getApplicationContext(),AlumniMemberListActivity.class);
         startActivity(intent);
     }
+
     public void AddEvents (View v){
         Intent intent = new Intent(getApplicationContext(),AlumniAddEventActivity.class);
         startActivity(intent);
@@ -37,7 +38,7 @@ public class AlumniMainActivity extends AppCompatActivity {
         startActivity(intent);
     }
     public void JobReferals (View v){
-        Intent intent=new Intent(getApplicationContext(),AlumniJobReferalActivity.class);
+        Intent intent=new Intent(getApplicationContext(),AlumniJobReferralsActivity.class);
         startActivity(intent);
     }
     public void ViewProfile(View v){

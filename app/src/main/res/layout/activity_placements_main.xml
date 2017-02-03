@@ -5,6 +5,7 @@
     android:id="@+id/activity_placements_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/lavender"
     tools:context="com.samkeet.smartrevaadmin.Placements.PlacementsMainActivity">
     <android.support.design.widget.AppBarLayout
         android:id="@+id/apppppp"
@@ -62,13 +63,11 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/apppppp"
-        android:background="@color/lavender"
         >
         <LinearLayout
             android:layout_width="match_parent"
             android:background="@color/lavender"
             android:layout_height="match_parent"
-            android:layout_below="@id/apppppp"
             android:orientation="vertical"
 
             >

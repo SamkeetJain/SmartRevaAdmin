@@ -42,15 +42,18 @@ public class AlumniJobReferalActivity extends AppCompatActivity {
     private RecyclerView.LayoutManager mLayoutManager;
     public SwipeRefreshLayout swipeRefreshLayout;
 
-    public String[] mName,mCompany,mJobType,mJobRole;
+    public String typea;
+
+
+    public String[] mName, mCompany, mJobType, mJobRole;
     public JSONObject[] objects;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alumni_job_referal);
-
-        progressDialogContext=this;
+        typea = getIntent().getStringExtra("TYPE");
+        progressDialogContext = this;
 
         mRecyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
         mRecyclerView.setHasFixedSize(true);
@@ -85,6 +88,7 @@ public class AlumniJobReferalActivity extends AppCompatActivity {
                     int temp = mRecyclerView.getChildPosition(child);
                     Intent intent = new Intent(getApplicationContext(), AlumniJobReferalManager.class);
                     intent.putExtra("DATA", objects[temp].toString());
+                    intent.putExtra("TYPE",typea);
                     startActivity(intent);
 
                 }
@@ -105,7 +109,10 @@ public class AlumniJobReferalActivity extends AppCompatActivity {
         GetPendingJobRequests getPendingJobRequests = new GetPendingJobRequests();
         getPendingJobRequests.execute();
     }
-    public void BackButton (View v){finish();}
+
+    public void BackButton(View v) {
+        finish();
+    }
 
     private class GetPendingJobRequests extends AsyncTask<Void, Void, Integer> {
 
@@ -125,7 +132,7 @@ public class AlumniJobReferalActivity extends AppCompatActivity {
                 connection.setRequestMethod("POST");
                 Log.d("POST", "DATA ready to sent");
 
-                Uri.Builder _data = new Uri.Builder().appendQueryParameter("token", Constants.SharedPreferenceData.getTOKEN()).appendQueryParameter("requestType","getpending");
+                Uri.Builder _data = new Uri.Builder().appendQueryParameter("token", Constants.SharedPreferenceData.getTOKEN()).appendQueryParameter("requestType", typea);
                 BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(connection.getOutputStream(), "UTF-8"));
                 writer.write(_data.build().getEncodedQuery());
                 writer.flush();
@@ -163,7 +170,7 @@ public class AlumniJobReferalActivity extends AppCompatActivity {
                         mJobType[i] = jsonObject.getString("job_type");
                         mJobRole[i] = jsonObject.getString("job_role");
                     }
-                    authenticationError=false;
+                    authenticationError = false;
                 }
 
                 return 1;
@@ -183,8 +190,10 @@ public class AlumniJobReferalActivity extends AppCompatActivity {
             if (authenticationError) {
                 Toast.makeText(getApplicationContext(), errorMessage, Toast.LENGTH_SHORT).show();
             } else {
-                mAdapter = new AlumniJobReferalAdapter(mName, mCompany,mJobType,mJobRole);
-                mRecyclerView.setAdapter(mAdapter);
+                if (mName.length > 0) {
+                    mAdapter = new AlumniJobReferalAdapter(mName, mCompany, mJobType, mJobRole);
+                    mRecyclerView.setAdapter(mAdapter);
+                }
             }
         }
     }

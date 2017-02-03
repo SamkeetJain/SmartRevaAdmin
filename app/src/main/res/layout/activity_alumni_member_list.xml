@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_event_member_list"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_alumni_member_list"
     android:layout_width="match_parent"
-    android:background="@color/lavender"
     android:layout_height="match_parent"
-    tools:context="com.samkeet.smartrevaadmin.Alumni.AlumniEventListManager">
-
+    android:background="@color/lavender"
+    tools:context="com.samkeet.smartrevaadmin.Alumni.AlumniMemberListActivity">
     <android.support.design.widget.AppBarLayout
         android:id="@+id/apppppp"
         android:layout_width="match_parent"
@@ -39,14 +38,13 @@
                     android:paddingLeft="5dp"
                     android:src="@drawable/ic_arrow_back_black_24dp" />
 
-
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_toRightOf="@+id/back_button"
                     android:paddingLeft="15dp"
-                    android:text="Event Manager"
+                    android:text="Member List"
                     android:textColor="#ffffff"
                     android:textSize="20sp" />
 
@@ -67,7 +65,9 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/apppppp">
+        android:layout_below="@+id/apppppp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -76,94 +76,61 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="15dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Event Name: "
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:id="@+id/name"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="16sp" />
+                android:layout_height="75dp">
 
             </LinearLayout>
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="15dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Event Type: "
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:id="@+id/type"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="16sp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="15dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Event Date: "
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:id="@+id/date"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="16sp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="15dp">
-
-                <TextView
-                    android:id="@+id/desc"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_margin="15dp"
+                android:gravity="center"
+                android:orientation="horizontal">
 
                 <Button
+                    android:id="@+id/member_pending_button"
                     style="@style/Widget.AppCompat.Button.Colored"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="210dp"
+                    android:layout_height="50dp"
                     android:layout_gravity="center"
-                    android:onClick="GetMembers"
-                    android:text="Get Members List" />
+                    android:gravity="center"
+                    android:onClick="MemberPend"
+                    android:text="Pending" />
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:gravity="center"
+                android:orientation="horizontal">
 
+                <Button
+                    android:id="@+id/member_accepted_button"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="210dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:onClick="MemberAcc"
+                    android:text="Accepted" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/member_rejected_button"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="210dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:onClick="MemberRej"
+                    android:text="Rejected" />
+            </LinearLayout>
         </LinearLayout>
-
     </ScrollView>
-
-
 </RelativeLayout>
