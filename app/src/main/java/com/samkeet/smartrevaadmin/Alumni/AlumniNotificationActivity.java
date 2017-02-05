@@ -1,6 +1,7 @@
 package com.samkeet.smartrevaadmin.Alumni;
 
 import android.content.Context;
+import android.net.ConnectivityManager;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
@@ -67,12 +68,16 @@ public class AlumniNotificationActivity extends AppCompatActivity {
         if (!validateMessage()){
             return ;
         }
-        Sendnotification sendnotification = new Sendnotification();
-        sendnotification.execute();
+        if (Constants.Methods.networkState(getApplicationContext(), (ConnectivityManager) getSystemService(getApplicationContext().CONNECTIVITY_SERVICE))) {
 
-        SendPush sendPush = new SendPush();
-        sendPush.execute();
+            Sendnotification sendnotification = new Sendnotification();
+            sendnotification.execute();
+        }
+        if (Constants.Methods.networkState(getApplicationContext(), (ConnectivityManager) getSystemService(getApplicationContext().CONNECTIVITY_SERVICE))) {
 
+            SendPush sendPush = new SendPush();
+            sendPush.execute();
+        }
     }
     private boolean validTitle(){
         if (title.length()>100){
