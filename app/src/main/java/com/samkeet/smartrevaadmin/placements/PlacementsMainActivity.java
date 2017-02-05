@@ -18,7 +18,7 @@ public class PlacementsMainActivity extends AppCompatActivity {
     public void BackButton (View v){finish();}
 
     public void AddDrive (View v){
-        Intent intent =new Intent(getApplicationContext(), PlacementAddDriveActivity.class);
+        Intent intent =new Intent(getApplicationContext(), PlacementNewDriveActivity.class);
         startActivity(intent);
     }
     public void ManageDrives (View v){

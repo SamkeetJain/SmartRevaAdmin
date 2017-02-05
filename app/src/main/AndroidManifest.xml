@@ -23,12 +23,14 @@
         <activity android:name=".Counselling.CounclingMainActivity" />
         <activity android:name=".Fees.FeesMainActivity" />
         <activity android:name=".Placements.PlacementsMainActivity" />
-        <activity android:name=".Alumni.AlumniMemberRequestActivity"
-            android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity
+            android:name=".Alumni.AlumniMemberRequestActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity android:name=".Alumni.AlumniAddEventActivity" />
         <activity android:name=".Alumni.AlumniEventListActivity" />
-        <activity android:name=".Alumni.AlumniMemberRequestManager"
-            android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity
+            android:name=".Alumni.AlumniMemberRequestManager"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity android:name=".Alumni.AlumniEventListManager" />
         <activity android:name=".Fees.ViewFeeActivity" />
         <activity android:name=".Fees.AddFeeDetailsActivity" />
@@ -50,13 +52,15 @@
         <activity android:name=".Alumni.AlumniBlogActivity" />
         <activity android:name=".Alumni.AlumniBlogManager" />
         <activity android:name=".Alumni.AlumniJobReferalActivity" />
-        <activity android:name=".Alumni.AlumniJobReferalManager"
-            android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity
+            android:name=".Alumni.AlumniJobReferalManager"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity android:name=".Alumni.AlumniViewProfileActivity" />
         <activity android:name=".Placements.PlacementMemberListActivity" />
         <activity android:name=".Alumni.AlumniNotificationActivity" />
         <activity android:name=".Alumni.AlumniJobReferralsActivity" />
-        <activity android:name=".Alumni.AlumniMemberListActivity"></activity>
+        <activity android:name=".Alumni.AlumniMemberListActivity" />
+        <activity android:name=".Placements.PlacementNewDriveActivity" />
     </application>
 
 </manifest>
