@@ -1,6 +1,7 @@
 package com.samkeet.smartrevaadmin.Alumni;
 
 import android.content.Context;
+import android.net.ConnectivityManager;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
@@ -119,11 +120,16 @@ public class AlumniJobReferalManager extends AppCompatActivity {
         authenticationError = true;
         errorMessage = "Data Corrupted";
         requestType = "approve";
-        MemberRequest memberRequest = new MemberRequest();
-        memberRequest.execute();
-        AlumniJobReferalManager.AddRemark addRemark = new AlumniJobReferalManager.AddRemark();
-        addRemark.execute();
+        if (Constants.Methods.networkState(getApplicationContext(), (ConnectivityManager) getSystemService(getApplicationContext().CONNECTIVITY_SERVICE))) {
 
+            MemberRequest memberRequest = new MemberRequest();
+            memberRequest.execute();
+        }
+        if (Constants.Methods.networkState(getApplicationContext(), (ConnectivityManager) getSystemService(getApplicationContext().CONNECTIVITY_SERVICE))) {
+
+            AlumniJobReferalManager.AddRemark addRemark = new AlumniJobReferalManager.AddRemark();
+            addRemark.execute();
+        }
 
     }
 
@@ -139,11 +145,16 @@ public class AlumniJobReferalManager extends AppCompatActivity {
         authenticationError = true;
         errorMessage = "Data Corrupted";
         requestType = "reject";
-        MemberRequest memberRequest = new MemberRequest();
-        memberRequest.execute();
-        AlumniJobReferalManager.AddRemark addRemark = new AlumniJobReferalManager.AddRemark();
-        addRemark.execute();
+        if (Constants.Methods.networkState(getApplicationContext(), (ConnectivityManager) getSystemService(getApplicationContext().CONNECTIVITY_SERVICE))) {
 
+            MemberRequest memberRequest = new MemberRequest();
+            memberRequest.execute();
+        }
+        if (Constants.Methods.networkState(getApplicationContext(), (ConnectivityManager) getSystemService(getApplicationContext().CONNECTIVITY_SERVICE))) {
+
+            AlumniJobReferalManager.AddRemark addRemark = new AlumniJobReferalManager.AddRemark();
+            addRemark.execute();
+        }
 
     }
 

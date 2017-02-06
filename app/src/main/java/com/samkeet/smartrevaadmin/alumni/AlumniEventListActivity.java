@@ -42,14 +42,14 @@ public class AlumniEventListActivity extends AppCompatActivity {
     private RecyclerView.LayoutManager mLayoutManager;
     public SwipeRefreshLayout swipeRefreshLayout;
 
-    public String[] mName,mType,mDesc,mDate;
+    public String[] mName, mType, mDesc, mDate;
     public JSONObject[] objects;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alumni_event_list);
-        progressDialogContext=this;
+        progressDialogContext = this;
 
         mRecyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
         mRecyclerView.setHasFixedSize(true);
@@ -65,7 +65,6 @@ public class AlumniEventListActivity extends AppCompatActivity {
                 }
             }
         });
-
 
 
         final GestureDetector mGestureDetector = new GestureDetector(getApplicationContext(), new GestureDetector.SimpleOnGestureListener() {
@@ -102,12 +101,18 @@ public class AlumniEventListActivity extends AppCompatActivity {
 
             }
         });
+        if (Constants.Methods.networkState(getApplicationContext(), (ConnectivityManager) getSystemService(getApplicationContext().CONNECTIVITY_SERVICE))) {
 
-        GetEventList getEventList = new GetEventList();
-        getEventList.execute();
 
+            GetEventList getEventList = new GetEventList();
+            getEventList.execute();
+
+        }
     }
-    public void BackButton (View v){finish();}
+
+    public void BackButton(View v) {
+        finish();
+    }
 
     private class GetEventList extends AsyncTask<Void, Void, Integer> {
 
@@ -128,7 +133,7 @@ public class AlumniEventListActivity extends AppCompatActivity {
                 Log.d("POST", "DATA ready to sent");
 
                 Uri.Builder _data = new Uri.Builder().appendQueryParameter("token", Constants.SharedPreferenceData.getTOKEN())
-                        .appendQueryParameter("requestType","get");
+                        .appendQueryParameter("requestType", "get");
                 BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(connection.getOutputStream(), "UTF-8"));
                 writer.write(_data.build().getEncodedQuery());
                 writer.flush();
@@ -166,7 +171,7 @@ public class AlumniEventListActivity extends AppCompatActivity {
                         mDate[i] = jsonObject.getString("edate");
                         mDesc[i] = jsonObject.getString("description");
                     }
-                    authenticationError=false;
+                    authenticationError = false;
                 }
 
                 return 1;
@@ -186,7 +191,7 @@ public class AlumniEventListActivity extends AppCompatActivity {
             if (authenticationError) {
                 Toast.makeText(getApplicationContext(), errorMessage, Toast.LENGTH_SHORT).show();
             } else {
-                mAdapter = new AlumniEventListAdapter(mName,mType,mDate,mDesc);
+                mAdapter = new AlumniEventListAdapter(mName, mType, mDate, mDesc);
                 mRecyclerView.setAdapter(mAdapter);
             }
 

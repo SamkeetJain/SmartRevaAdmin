@@ -1,6 +1,7 @@
 package com.samkeet.smartrevaadmin.Alumni;
 
 import android.content.Context;
+import android.net.ConnectivityManager;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
@@ -91,8 +92,11 @@ public class AlumniViewProfileActivity extends AppCompatActivity {
         if (!validMob()){
             return;
         }
-        GetPendingMembers getPendingMembers = new GetPendingMembers();
-        getPendingMembers.execute();
+        if (Constants.Methods.networkState(getApplicationContext(), (ConnectivityManager) getSystemService(getApplicationContext().CONNECTIVITY_SERVICE))) {
+
+            GetPendingMembers getPendingMembers = new GetPendingMembers();
+            getPendingMembers.execute();
+        }
     }
 
     private boolean validMob(){

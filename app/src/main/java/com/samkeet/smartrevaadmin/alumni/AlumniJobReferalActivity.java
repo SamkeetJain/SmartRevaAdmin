@@ -105,9 +105,11 @@ public class AlumniJobReferalActivity extends AppCompatActivity {
 
             }
         });
+        if (Constants.Methods.networkState(getApplicationContext(), (ConnectivityManager) getSystemService(getApplicationContext().CONNECTIVITY_SERVICE))) {
 
-        GetPendingJobRequests getPendingJobRequests = new GetPendingJobRequests();
-        getPendingJobRequests.execute();
+            GetPendingJobRequests getPendingJobRequests = new GetPendingJobRequests();
+            getPendingJobRequests.execute();
+        }
     }
 
     public void BackButton(View v) {

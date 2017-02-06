@@ -2,6 +2,7 @@ package com.samkeet.smartrevaadmin.Alumni;
 
 import android.content.Context;
 import android.content.pm.PackageManager;
+import android.net.ConnectivityManager;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.support.annotation.NonNull;
@@ -92,9 +93,11 @@ public class AlumniEventListManager extends AppCompatActivity {
             ActivityCompat.requestPermissions(this, new String[]{android.Manifest.permission.READ_EXTERNAL_STORAGE,android.Manifest.permission.WRITE_EXTERNAL_STORAGE}, STORAGE_PERMISSION);
             return;
         }
+        if (Constants.Methods.networkState(getApplicationContext(), (ConnectivityManager) getSystemService(getApplicationContext().CONNECTIVITY_SERVICE))) {
 
-        GetMemberList getMemberList = new GetMemberList();
-        getMemberList.execute();
+            GetMemberList getMemberList = new GetMemberList();
+            getMemberList.execute();
+        }
     }
 
     @Override

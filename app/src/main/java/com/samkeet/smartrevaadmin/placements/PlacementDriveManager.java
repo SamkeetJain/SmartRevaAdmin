@@ -15,7 +15,6 @@ import android.widget.Toast;
 
 import com.samkeet.smartrevaadmin.Constants;
 import com.samkeet.smartrevaadmin.R;
-import com.squareup.picasso.Picasso;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -63,7 +62,6 @@ public class PlacementDriveManager extends AppCompatActivity {
             id=object.getString("ID");
             mTitle.setText(object.getString("comp_name"));
             mDetails.setText(object.getString("details"));
-            Picasso.with(getApplicationContext()).load(Constants.URLs.BASE+"uploads/"+object.getString("logoFileName")).into(mImage);
 
         } catch (JSONException e) {
             e.printStackTrace();

@@ -1,6 +1,7 @@
 package com.samkeet.smartrevaadmin.Alumni;
 
 import android.content.Context;
+import android.net.ConnectivityManager;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
@@ -81,8 +82,11 @@ public class AlumniAddEventActivity extends AppCompatActivity implements DatePic
             Toast.makeText(getApplicationContext(),"Date is invalid",Toast.LENGTH_SHORT);
             return;
         }
-        AddEvent addEvent = new AddEvent();
-        addEvent.execute();
+        if (Constants.Methods.networkState(getApplicationContext(), (ConnectivityManager) getSystemService(getApplicationContext().CONNECTIVITY_SERVICE))) {
+
+            AddEvent addEvent = new AddEvent();
+            addEvent.execute();
+        }
     }
 
     private boolean validTitle() {

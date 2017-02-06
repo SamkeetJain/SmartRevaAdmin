@@ -1,6 +1,7 @@
 package com.samkeet.smartrevaadmin.Alumni;
 
 import android.content.Context;
+import android.net.ConnectivityManager;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
@@ -84,10 +85,13 @@ public class AlumniBlogManager extends AppCompatActivity {
     }
 
     public void Delete(View v) {
-        DeletePost deletePost = new DeletePost();
-        deletePost.execute();
-    }
+        if (Constants.Methods.networkState(getApplicationContext(), (ConnectivityManager) getSystemService(getApplicationContext().CONNECTIVITY_SERVICE))) {
 
+            DeletePost deletePost = new DeletePost();
+            deletePost.execute();
+        }
+
+    }
     public class DeletePost extends AsyncTask<Void, Void, Integer> {
 
         protected void onPreExecute() {

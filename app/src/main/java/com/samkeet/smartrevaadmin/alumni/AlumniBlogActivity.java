@@ -2,6 +2,7 @@ package com.samkeet.smartrevaadmin.Alumni;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -95,13 +96,18 @@ public class AlumniBlogActivity extends AppCompatActivity {
         swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
-                GetDisscussion getDisscussion = new GetDisscussion();
-                getDisscussion.execute();
+                if (Constants.Methods.networkState(getApplicationContext(), (ConnectivityManager) getSystemService(getApplicationContext().CONNECTIVITY_SERVICE))) {
+
+                    GetDisscussion getDisscussion = new GetDisscussion();
+                    getDisscussion.execute();
+                }
             }
         });
+        if (Constants.Methods.networkState(getApplicationContext(), (ConnectivityManager) getSystemService(getApplicationContext().CONNECTIVITY_SERVICE))) {
 
-        GetDisscussion getDisscussion = new GetDisscussion();
-        getDisscussion.execute();
+            GetDisscussion getDisscussion = new GetDisscussion();
+            getDisscussion.execute();
+        }
     }
 
     public void BackButton(View v) {
