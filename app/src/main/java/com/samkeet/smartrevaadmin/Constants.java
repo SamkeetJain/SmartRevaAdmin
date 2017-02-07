@@ -34,6 +34,11 @@ public class Constants {
         public static String PLACEMENT_ACADEMIC_PROFILE = "ADM_placement_academic_profile.php";
         public static String PLACEMENT_DRIVE_MANAGER = "ADM_placement_drive_manager.php";
 
+        public static String PLACEMENT_BASE = "http://revacounselling.16mb.com/placement/";
+        public static String PLACEMENT_COURSE_DEPT = "course_dept.php";
+        public static String PLACEMENT_EXCELDATA = "exceldata.php";
+        public static String PLACEMENT_GETFILTERLIST = "getfilterlist.php";
+
     }
 
     public static class SharedPreferenceData {

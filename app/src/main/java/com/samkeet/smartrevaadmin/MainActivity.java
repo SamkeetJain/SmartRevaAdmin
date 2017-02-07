@@ -8,6 +8,7 @@ import android.view.View;
 import com.samkeet.smartrevaadmin.Alumni.AlumniMainActivity;
 import com.samkeet.smartrevaadmin.Counselling.CounclingMainActivity;
 import com.samkeet.smartrevaadmin.Fees.FeesMainActivity;
+import com.samkeet.smartrevaadmin.Placement2.Placement2MainActivity;
 import com.samkeet.smartrevaadmin.Placements.PlacementsMainActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -21,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void Placements(View v) {
-        Intent intent = new Intent(getApplicationContext(), PlacementsMainActivity.class);
+        Intent intent = new Intent(getApplicationContext(), Placement2MainActivity.class);
         startActivity(intent);
     }
 

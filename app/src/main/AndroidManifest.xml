@@ -61,6 +61,12 @@
         <activity android:name=".Alumni.AlumniJobReferralsActivity" />
         <activity android:name=".Alumni.AlumniMemberListActivity" />
         <activity android:name=".Placements.PlacementNewDriveActivity" />
+        <activity android:name=".Placement2.Placement2MainActivity" />
+        <activity android:name=".Placement2.Placement2FilterList" />
+        <activity
+            android:name=".Placement2.Placement2SelectBranchActivity"
+            android:label=""
+            android:theme="@style/dialog"></activity>
     </application>
 
 </manifest>
