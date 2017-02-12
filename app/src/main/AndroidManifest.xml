@@ -66,7 +66,8 @@
         <activity
             android:name=".Placement2.Placement2SelectBranchActivity"
             android:label=""
-            android:theme="@style/dialog"></activity>
+            android:theme="@style/dialog" />
+        <activity android:name=".Placement2.Placement2PostInviteActivity"></activity>
     </application>
 
 </manifest>

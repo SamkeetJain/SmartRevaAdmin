@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_placement_filter_list"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_placement2_post_invite"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.samkeet.smartrevaadmin.Placement2.Placement2FilterList">
+    tools:context="com.samkeet.smartrevaadmin.Placement2.Placement2PostInviteActivity">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/apppppp"
@@ -15,11 +15,11 @@
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/colorAccent"
-            app:layout_scrollFlags="scroll|enterAlways"
-            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+            android:background="@color/colorAccent">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -61,8 +61,8 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_below="@+id/apppppp"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/apppppp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -70,6 +70,52 @@
             android:orientation="vertical"
             android:padding="10dp">
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Company Name" />
+
+                <EditText
+                    android:id="@+id/comp_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/selectDate"
+                    style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Date"
+                    android:textColor="#808080" />
+
+                <TextView
+                    android:id="@+id/ddate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:maxLines="1" />
+
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -249,17 +295,31 @@
 
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Details"
+                    android:id="@+id/detailsview"
+                    android:imeOptions="actionDone"
+                    android:inputType="textMultiLine"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
             <Button
                 style="@style/Base.Widget.AppCompat.Button.Colored"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:onClick="Send"
-                android:text="Get List" />
+                android:text="Send Invites" />
 
         </LinearLayout>
 
     </ScrollView>
-
 
 </RelativeLayout>

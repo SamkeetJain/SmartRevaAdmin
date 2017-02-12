@@ -21,7 +21,8 @@ public class Placement2MainActivity extends AppCompatActivity {
     }
 
     public void PostNewDrive(View v){
-
+        Intent intent = new Intent(getApplicationContext(),Placement2PostInviteActivity.class);
+        startActivity(intent);
     }
 
     public void ManageDrives(View v){
