@@ -6,6 +6,7 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.CardView;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
@@ -30,6 +31,8 @@ public class AlumniJobReferalManager extends AppCompatActivity {
 
     public TextView mName, mMobile, mComp, mType, mRole, mDesc, mEmail;
     public String name, mobile, comp, type, role, desc, email, ID;
+
+    public CardView cRemarks;
 
     public JSONObject object;
     public String data;
@@ -61,6 +64,8 @@ public class AlumniJobReferalManager extends AppCompatActivity {
         mDesc = (TextView) findViewById(R.id.desc);
         mEmail = (TextView) findViewById(R.id.email);
 
+        cRemarks= (CardView) findViewById(R.id.remarks_card);
+
         mRemarks = (EditText) findViewById(R.id.remarks_et);
         data = getIntent().getStringExtra("DATA");
 
@@ -89,6 +94,10 @@ public class AlumniJobReferalManager extends AppCompatActivity {
         mRole.setText(role);
         mDesc.setText(desc);
         mRemarks.setText(remarks);
+
+        if (typea.equals("getapprove") || typea.equals("getreject")){
+            cRemarks.setVisibility(View.GONE);
+        }
     }
 
     public void BackButton(View v) {

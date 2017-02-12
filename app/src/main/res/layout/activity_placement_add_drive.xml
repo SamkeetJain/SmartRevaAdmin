@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_add_event2"
     android:layout_width="match_parent"
-    android:background="@color/lavender"
     android:layout_height="match_parent"
+    android:background="@color/lavender"
     tools:context="com.samkeet.smartrevaadmin.Placements.PlacementAddDriveActivity">
 
     <android.support.design.widget.AppBarLayout
@@ -51,8 +51,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
-                    android:paddingRight="25dp"
                     android:onClick="Send"
+                    android:paddingRight="25dp"
                     android:src="@drawable/ic_send_black_24dp" />
 
             </RelativeLayout>
@@ -79,244 +79,300 @@
             android:orientation="vertical"
             android:padding="15dp">
 
-            <LinearLayout
+            <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:elevation="4dp"
+                app:cardUseCompatPadding="true">
 
-                <TextView
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Company Name:"
-                    android:textSize="16sp" />
+                    android:orientation="vertical">
 
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:maxLines="1"
-                    android:id="@+id/comp"
-                    android:lines="1"
-                    android:imeOptions="actionNext"
-                    android:hint="Drive Name"
-                    android:textSize="16sp"
-                    android:inputType="textImeMultiLine" />
-            </LinearLayout>
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/company_name_til"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Company Name"
+                        android:paddingBottom="3dp"
+                        android:paddingLeft="3dp"
+                        android:paddingTop="3dp">
 
-            <LinearLayout
+                        <EditText
+                            android:id="@+id/company_name_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:imeOptions="actionNext"
+                            android:inputType="textImeMultiLine"
+                            android:lines="1"
+                            android:maxLines="1"
+                            android:textSize="16sp" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/job_role_til"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Job Role"
+                        android:paddingBottom="3dp"
+                        android:paddingLeft="3dp"
+                        android:paddingTop="3dp">
+
+                        <EditText
+                            android:id="@+id/job_role_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:imeOptions="actionNext"
+                            android:inputType="textImeMultiLine"
+                            android:lines="1"
+                            android:maxLines="1"
+                            android:textSize="16sp" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/drive_date_til"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Drive Date"
+                        android:paddingBottom="3dp"
+                        android:paddingLeft="3dp"
+                        android:paddingTop="3dp">
+
+                        <EditText
+                            android:id="@+id/drive_date_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:imeOptions="actionNext"
+                            android:inputType="textImeMultiLine"
+                            android:lines="1"
+                            android:maxLines="1"
+                            android:textSize="16sp" />
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:elevation="4dp"
+                app:cardUseCompatPadding="true">
 
-                <TextView
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Job Role:"
-                    android:textSize="16sp" />
+                    android:orientation="vertical">
 
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:inputType="text"
-                    android:textSize="16sp"
-                    android:maxLines="1"
-                    android:id="@+id/role"
-                    android:lines="1"
-                    android:imeOptions="actionNext"
-                    android:hint="ex. developer" />
-            </LinearLayout>
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/tenth_til"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="min 10th marks"
+                        android:paddingBottom="3dp"
+                        android:paddingLeft="3dp"
+                        android:paddingTop="3dp">
 
+                        <EditText
+                            android:id="@+id/tenth_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:lines="1"
+                            android:maxLines="1"
+                            android:textSize="16sp" />
+                    </android.support.design.widget.TextInputLayout>
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#e0e0e0" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Date"
-                    android:textSize="16sp" />
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:maxLines="1"
-                    android:id="@+id/ddate"
-                    android:inputType="text"
-                    android:lines="1"
-                    android:imeOptions="actionNext"
-                    android:textSize="16sp"
-                    android:hint="ex.Date" />
-            </LinearLayout>
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/twelB_til"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="min 12th marks"
+                        android:paddingBottom="3dp"
+                        android:paddingLeft="3dp"
+                        android:paddingTop="3dp">
 
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                        <EditText
+                            android:id="@+id/twelth_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:lines="1"
+                            android:maxLines="1"
+                            android:textSize="16sp" />
+                    </android.support.design.widget.TextInputLayout>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Min 10th Score"
-                    android:textSize="16sp" />
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/ug_marks_til"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="min UG marks"
+                        android:paddingBottom="3dp"
+                        android:paddingLeft="3dp"
+                        android:paddingTop="3dp">
 
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:textSize="16sp"
-                    android:id="@+id/tenth"
-                    android:maxLines="1"
-                    android:lines="1"
-                    android:inputType="text"
-                    android:imeOptions="actionNext"
-                    android:hint="ex. 93" />
-            </LinearLayout>
+                        <EditText
+                            android:id="@+id/ug_marks_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:lines="1"
+                            android:maxLines="1"
+                            android:textSize="16sp" />
+                    </android.support.design.widget.TextInputLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
 
-            <LinearLayout
+            <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:elevation="4dp"
+                app:cardUseCompatPadding="true">
 
-                <TextView
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Min 12th Score"
-                    android:textSize="16sp" />
+                    android:orientation="vertical">
 
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:maxLines="1"
-                    android:lines="1"
-                    android:inputType="text"
-                    android:id="@+id/twelth"
-                    android:imeOptions="actionNext"
-                    android:textSize="16sp"
-                    android:hint="ex. 98" />
-            </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="3dp">
 
-            <LinearLayout
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:paddingLeft="3dp"
+                            android:text="Course"
+                            android:textSize="16sp" />
+
+                        <Spinner
+                            android:id="@+id/course_spinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                        </Spinner>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="3dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:paddingLeft="3dp"
+                            android:text="Branch"
+                            android:textSize="16sp" />
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/branch_button"
+                            android:layout_weight="1"
+                            android:background="#ffffff"
+                            android:onClick="BranchButton"/>
+
+                    </LinearLayout>
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/backlog_history_til"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="BackLog History"
+                        android:paddingBottom="3dp"
+                        android:paddingLeft="3dp"
+                        android:paddingTop="3dp">
+
+
+                        <EditText
+                            android:id="@+id/backlog_history_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:lines="1"
+                            android:maxLines="1"
+                            android:textSize="16sp" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/current_backlog_til"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Current Backlog"
+                        android:paddingBottom="3dp"
+                        android:paddingLeft="3dp"
+                        android:paddingTop="3dp">
+
+
+                        <EditText
+                            android:id="@+id/current_backlog_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:lines="1"
+                            android:maxLines="1"
+                            android:textSize="16sp" />
+                    </android.support.design.widget.TextInputLayout>
+</LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:elevation="4dp"
+                app:cardUseCompatPadding="true">
 
-                <TextView
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Min UG Grade"
-                    android:textSize="16sp" />
+                    android:orientation="vertical"
+                    android:paddingBottom="3dp"
+                    android:paddingTop="3dp">
 
-                <EditText
-                    android:layout_width="match_parent"
-                    android:maxLines="1"
-                    android:lines="1"
-                    android:imeOptions="actionNext"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:id="@+id/ug"
-                    android:inputType="text"
-                    android:textSize="16sp"
-                    android:hint="ex. 9.2" />
-            </LinearLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Description:"
+                        android:textSize="16sp"
+                        android:paddingBottom="3dp"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#e0e0e0"/>
+                    <EditText
+                        android:id="@+id/drive_desc_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:imeOptions="actionDone"
+                        android:inputType="text"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
 
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#e0e0e0" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Backlog history"
-                    android:textSize="16sp" />
-
-                <Spinner
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:maxLines="1"
-                    android:lines="1"
-                    android:imeOptions="actionNext"
-                    android:id="@+id/backloghistory"
-                    android:textSize="16sp"
-                    android:hint="Backlog history" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Current Backlog"
-                    android:textSize="16sp" />
-
-                <Spinner
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:id="@+id/currentbacklog"
-                    android:maxLines="1"
-                    android:lines="1"
-                    android:imeOptions="actionNext"
-                    android:textSize="16sp"
-                    android:hint="Current Backlog" />
-            </LinearLayout>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#e0e0e0" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:paddingBottom="5dp"
-                    android:text="Description:"
-                    android:textSize="14sp" />
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:id="@+id/desc"
-                    android:imeOptions="actionDone"
-                    android:textSize="16sp"
-                    android:hint="Drive Description"
-                    android:inputType="textMultiLine" />
-            </LinearLayout>
         </LinearLayout>
 
     </ScrollView>

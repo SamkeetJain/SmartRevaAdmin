@@ -67,7 +67,9 @@
             android:name=".Placement2.Placement2SelectBranchActivity"
             android:label=""
             android:theme="@style/dialog" />
-        <activity android:name=".Placement2.Placement2PostInviteActivity"></activity>
+        <activity android:name=".Placement2.Placement2PostInviteActivity" />
+        <activity android:name=".Placement2.Placement2ManageDriveActivity" />
+        <activity android:name=".Placement2.Placement2ManageDriveManager"></activity>
     </application>
 
 </manifest>

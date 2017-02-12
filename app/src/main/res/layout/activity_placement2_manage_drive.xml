@@ -2,15 +2,18 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_placement2_main"
+    android:id="@+id/activity_member_request"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.samkeet.smartrevaadmin.Placement2.Placement2MainActivity">
+    android:background="@color/lavender"
+    tools:context="com.samkeet.smartrevaadmin.Alumni.AlumniMemberRequestActivity">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/apppppp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
         <android.support.v7.widget.Toolbar
@@ -42,9 +45,10 @@
                     android:layout_centerHorizontal="true"
                     android:layout_toRightOf="@+id/back_button"
                     android:paddingLeft="15dp"
-                    android:text="Placement"
+                    android:text="Manage Drives"
                     android:textColor="#ffffff"
                     android:textSize="20sp" />
+
 
             </RelativeLayout>
 
@@ -59,43 +63,18 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <LinearLayout
+    <android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/swipe_refresh_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:gravity="center"
-        android:orientation="vertical">
+        android:layout_below="@+id/apppppp">
 
-        <Button
-            style="@style/Base.Widget.AppCompat.Button.Colored"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:onClick="GetFilterList"
-            android:text="get filtered list" />
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/my_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical" />
+    </android.support.v4.widget.SwipeRefreshLayout>
 
-        <Button
-            style="@style/Base.Widget.AppCompat.Button.Colored"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:onClick="PostNewDrive"
-            android:text="post new drive" />
-
-        <Button
-            style="@style/Base.Widget.AppCompat.Button.Colored"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:onClick="ManageDrives"
-            android:text="Manage drive" />
-
-        <Button
-            style="@style/Base.Widget.AppCompat.Button.Colored"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:onClick="Notification"
-            android:text="Send Notification" />
-
-
-    </LinearLayout>
 
 </RelativeLayout>

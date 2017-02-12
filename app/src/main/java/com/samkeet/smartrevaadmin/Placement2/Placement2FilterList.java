@@ -187,6 +187,7 @@ public class Placement2FilterList extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
                 selectedCourse = courseList[position];
                 initDeptList();
+                sbranch.setText("");
             }
 
             @Override

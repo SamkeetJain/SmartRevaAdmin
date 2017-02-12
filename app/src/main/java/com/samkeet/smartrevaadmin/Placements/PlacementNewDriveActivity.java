@@ -17,5 +17,9 @@ public class PlacementNewDriveActivity extends AppCompatActivity {
     }
     public void BackButton (View v){finish();}
 
+    public void BranchButton(View v){
+        Intent intent =new Intent(getApplicationContext(),PlacementNewDriveActivity.class);
+        startActivity(intent);
+    }
 
 }

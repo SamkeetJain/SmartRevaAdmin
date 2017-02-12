@@ -6,6 +6,7 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.CardView;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
@@ -33,6 +34,8 @@ public class AlumniMemberRequestManager extends AppCompatActivity {
     public Context progressDialogContext;
     public boolean authenticationError = true;
     public String errorMessage = "Data Corrupted";
+
+    public CardView cRemarks;
 
     public JSONObject object;
     public String data;
@@ -87,6 +90,8 @@ public class AlumniMemberRequestManager extends AppCompatActivity {
         mLoc = (TextView) findViewById(R.id.loc);
         mYog = (TextView) findViewById(R.id.yog);
 
+        cRemarks = (CardView) findViewById(R.id.remarks_card);
+
         mMobile.setText(mobile);
         mName.setText(name);
         mEmail.setText(email);
@@ -98,13 +103,17 @@ public class AlumniMemberRequestManager extends AppCompatActivity {
         mYog.setText(yog);
         mLoc.setText(loc);
         mRemarks.setText(remarks);
+
+        if (type.equals("getapproved") || type.equals("getrejected")){
+            cRemarks.setVisibility(View.GONE);
+        }
     }
 
 
 
     private boolean valid() {
         if (Constants.Methods.checkForSpecial(remarks)) {
-            Toast.makeText(getApplicationContext(), "remove special charecters from remarks", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Remove special charecters from remarks", Toast.LENGTH_LONG).show();
             return false;
         }
         if (remarks.length() > 256) {

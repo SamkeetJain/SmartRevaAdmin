@@ -15,21 +15,26 @@ public class Placement2MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_placement2_main);
     }
 
-    public void GetFilterList(View v){
-        Intent intent = new Intent(getApplicationContext(),Placement2FilterList.class);
+    public void GetFilterList(View v) {
+        Intent intent = new Intent(getApplicationContext(), Placement2FilterList.class);
         startActivity(intent);
     }
 
-    public void PostNewDrive(View v){
-        Intent intent = new Intent(getApplicationContext(),Placement2PostInviteActivity.class);
+    public void PostNewDrive(View v) {
+        Intent intent = new Intent(getApplicationContext(), Placement2PostInviteActivity.class);
         startActivity(intent);
     }
 
-    public void ManageDrives(View v){
+    public void ManageDrives(View v) {
+        Intent intent = new Intent(getApplicationContext(), Placement2ManageDriveActivity.class);
+        startActivity(intent);
+    }
+
+    public void Notification(View v) {
 
     }
 
-    public void BackButton(View v){
+    public void BackButton(View v) {
         finish();
     }
 }

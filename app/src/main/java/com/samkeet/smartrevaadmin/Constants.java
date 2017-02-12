@@ -38,6 +38,7 @@ public class Constants {
         public static String PLACEMENT_COURSE_DEPT = "course_dept.php";
         public static String PLACEMENT_EXCELDATA = "exceldata.php";
         public static String PLACEMENT_GETFILTERLIST = "getfilterlist.php";
+        public static String PLACEMENT_MANAGE_DRIVE = "ADM_placement_managedrive.php";
 
     }
 
