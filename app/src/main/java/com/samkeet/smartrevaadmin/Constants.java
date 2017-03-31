@@ -15,8 +15,8 @@ import java.util.regex.Pattern;
 public class Constants {
 
     public static class URLs {
-        public static String BASE = "http://revacounselling.16mb.com/";
-        public static String ALUMNI_BASE = "http://www.reva.ac.in/smartreva/alumni/";
+        public static String BASE = "http://35.154.54.229/SmartReva/";
+        public static String ALUMNI_BASE = "http://35.154.54.229/SmartReva/alumni/";
         public static String ALUMNI_BLOG = "ADM_alumni_discussion.php";
         public static String ALUMNI_EVENTS = "ADM_alumni_events.php";
         public static String ALUMNI_EVENTS_MANAGER = "ADM_alumni_eventsManager.php";
